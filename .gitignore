@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Generated proof/output artifacts
+build/
+final/
+pet-runs/
+
+# Local scratch
+.env
+.env.*
+
+# Large/generated sample artifacts
+wonder-engine-samples/

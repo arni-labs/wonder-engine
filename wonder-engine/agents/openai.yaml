@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wonder Engine"
+  short_description: "Make idea-rich illustrated picture books"
+  default_prompt: "Use $wonder-engine to turn my source material into a whimsical illustrated science-adventure picture book PDF."

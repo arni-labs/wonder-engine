@@ -1,0 +1,247 @@
+{
+  "title": "Working Title",
+  "subtitle": "A Quirky Tagline",
+  "author": "by Author Name",
+  "dpi": 300,
+  "trim": {
+    "cover": [8.5, 11.0],
+    "spread": [17.0, 11.0]
+  },
+  "continuity": {
+    "source_thesis": "Replace with the source idea that must stay true.",
+    "world_rules": [
+      "Replace with a stable rule of how this world works.",
+      "Replace with what important machines, creatures, or systems can and cannot do."
+    ],
+    "map_anchors": [
+      "Replace with stable places, routes, thresholds, or districts."
+    ],
+    "material_palette": [
+      "Replace with recurring materials, colors, weather, light, and textures."
+    ],
+    "characters": [
+      {
+        "name": "Character Name",
+        "role": "Story role and source-metaphor function.",
+        "visual_anchor": "Stable silhouette, age/scale, colors, clothing/casing, distinctive marks, and recurring prop.",
+        "speech_anchor": "Speech pattern or recurring phrase.",
+        "do_not_change": [
+          "Replace with details that must not drift across images."
+        ],
+        "prompt_snippet": "Concise reusable prompt snippet for this character.",
+        "reference_image": "images/characters.png"
+      }
+    ],
+    "world_prompt_snippet": "Concise reusable prompt snippet for the world.",
+    "reference_images": {
+      "characters": "images/characters.png",
+      "world": "images/world.png"
+    },
+    "continuity_risks": [
+      "Replace with details likely to drift or be confused by image generation."
+    ]
+  },
+  "font": {
+    "body": "",
+    "heading": "",
+    "title": "",
+    "author": "",
+    "body_size_pt": 17,
+    "heading_size_pt": 22,
+    "title_size_pt": 46,
+    "subtitle_size_pt": 20,
+    "author_size_pt": 18
+  },
+  "pages": [
+    {
+      "type": "cover",
+      "image": "images/cover.png",
+      "title": "Working Title",
+      "subtitle": "A Quirky Tagline",
+      "author": "by Author Name",
+      "title_box": [0.7, 0.55, 7.1, 2.1],
+      "subtitle_box": [0.85, 2.65, 6.8, 0.8],
+      "author_box": [0.7, 9.7, 7.1, 0.6]
+    },
+    {
+      "type": "front_matter",
+      "front_matter_kind": "characters",
+      "image": "images/characters.png",
+      "heading": "Meet The Cast",
+      "text": "Replace with short character descriptions and a locked label sheet.",
+      "text_rendering_mode": "mixed",
+      "native_text_policy": "Native image text is allowed for short integrated character names, badges, and one-line role notes after a label audit. Manually correct or regenerate any misspelled critical labels.",
+      "label_sheet": [
+        {
+          "id": "C1",
+          "text": "Character Name - brief who-they-are note",
+          "target": "Replace with character or prop target.",
+          "reader_purpose": "Explain who this character is, not only their name.",
+          "brief_explanation": "Replace with a tiny role, want, job, or story function.",
+          "importance": "critical",
+          "rendering_mode": "native_or_manual",
+          "max_length": "1 name plus 1 short who-they-are note",
+          "fallback": "Overlay manually if native text is wrong."
+        }
+      ],
+      "native_text_space": "Use a clean world-native layout for portraits or avatars with calm areas for short names, labels, badges, and descriptions.",
+      "text_blocks": [
+        {
+          "role": "heading",
+          "text": "Meet The Cast",
+          "box": [0.75, 0.65, 15.5, 0.75],
+          "size_pt": 24,
+          "min_size_pt": 18,
+          "bold": true,
+          "color": "blue",
+          "align": "center"
+        },
+        {
+          "role": "body",
+          "text": "Replace with manual corrections or extra short labels only. Remove this block if all labels are accepted as native image text.",
+          "box": [1.0, 8.9, 15.0, 1.35],
+          "size_pt": 13,
+          "min_size_pt": 10,
+          "color": "ink",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "type": "front_matter",
+      "front_matter_kind": "world",
+      "image": "images/world.png",
+      "heading": "A Map Of The World",
+      "text": "Replace with a locked label sheet for map, object, machine, or concept labels.",
+      "text_rendering_mode": "mixed",
+      "native_text_policy": "Native image text is allowed for short integrated map marks, object labels, badges, arrows, route names, and tiny rules after a label audit. Manually correct or regenerate any misspelled critical labels.",
+      "label_sheet": [
+        {
+          "id": "W1",
+          "text": "World Label - brief what-it-does note",
+          "target": "Replace with map place, object, machine, or rule target.",
+          "reader_purpose": "Explain what this fictional world element is when the name is not obvious.",
+          "brief_explanation": "Replace with a tiny function, rule, or why-it-matters note.",
+          "importance": "critical",
+          "rendering_mode": "native_or_manual",
+          "max_length": "1 short label plus 1 brief function note",
+          "fallback": "Overlay manually if native text is wrong."
+        }
+      ],
+      "native_text_space": "Use a map, cutaway, object atlas, route chart, machine diagram, or another world-native format with calm label areas.",
+      "text_blocks": [
+        {
+          "role": "heading",
+          "text": "A Map Of The World",
+          "box": [0.75, 0.65, 15.5, 0.75],
+          "size_pt": 24,
+          "min_size_pt": 18,
+          "bold": true,
+          "color": "blue",
+          "align": "center"
+        },
+        {
+          "role": "body",
+          "text": "Replace with manual corrections or extra short explanatory labels only. Remove this block if all labels are accepted as native image text.",
+          "box": [1.0, 8.9, 15.0, 1.35],
+          "size_pt": 13,
+          "min_size_pt": 10,
+          "color": "ink",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "type": "spread",
+      "spread_number": 1,
+      "image": "images/spread-01.png",
+      "chapter_label": "CHAPTER 1",
+      "heading": "Scene Heading",
+      "text": "Replace with final manuscript text for this spread.",
+      "native_text_space": "Illustration contains a calm blank or pale area sized for this text; do not render a generic panel over the art.",
+      "text_blocks": [
+        {
+          "role": "chapter_label",
+          "text": "CHAPTER 1",
+          "box": [0.75, 0.68, 5.6, 0.35],
+          "size_pt": 13,
+          "bold": true,
+          "color": "blue"
+        },
+        {
+          "role": "heading",
+          "text": "Scene Heading",
+          "box": [0.75, 1.12, 5.8, 1.0],
+          "size_pt": 22,
+          "min_size_pt": 16,
+          "bold": true,
+          "color": "blue"
+        },
+        {
+          "role": "body",
+          "text": "Replace with final manuscript text for this spread.",
+          "box": [0.75, 2.45, 5.8, 5.35],
+          "size_pt": 17,
+          "min_size_pt": 11,
+          "color": "ink",
+          "fit_to_negative_space": {
+            "min_width_in": 2.7,
+            "max_width_in": 5.8,
+            "center_x_in": 3.7,
+            "padding_in": 0.12,
+            "min_luma": 214,
+            "max_chroma": 64
+          },
+          "line_shape": [
+            {"x": 0.0, "width": 5.8},
+            {"x": 0.0, "width": 5.8},
+            {"x": 0.1, "width": 5.5},
+            {"x": 0.2, "width": 5.2}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "back_cover",
+      "image": "images/back-cover.png",
+      "native_text_space": "Portrait back-cover art leaves a calm text area for a short blurb, source note, or production credit.",
+      "text_blocks": [
+        {
+          "role": "heading",
+          "text": "About This Adventure",
+          "box": [0.8, 1.1, 6.9, 0.85],
+          "size_pt": 22,
+          "min_size_pt": 16,
+          "bold": true,
+          "color": "blue",
+          "align": "center"
+        },
+        {
+          "role": "body",
+          "text": "Replace with a short back-cover blurb, source note, or reader invitation.",
+          "box": [1.05, 2.25, 6.4, 5.2],
+          "size_pt": 15,
+          "min_size_pt": 10,
+          "color": "ink",
+          "fit_to_negative_space": {
+            "min_width_in": 2.7,
+            "max_width_in": 5.6,
+            "center_x_in": 4.25,
+            "padding_in": 0.12,
+            "min_luma": 214,
+            "max_chroma": 64
+          }
+        },
+        {
+          "role": "credit",
+          "text": "by Author Name",
+          "box": [1.05, 9.35, 6.4, 0.5],
+          "size_pt": 13,
+          "min_size_pt": 10,
+          "color": "blue",
+          "align": "center"
+        }
+      ]
+    }
+  ]
+}
