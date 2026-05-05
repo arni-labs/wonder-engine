@@ -76,13 +76,13 @@ Wonder Engine can shape a book for different languages, scripts, and reading con
 The image model still creates artwork, not final manuscript text. For localized or multilingual books, the workflow chooses fonts with the right script support and overlays the exact approved text after the illustration is generated.
 
 <figure>
-  <img src="./docs/assets/wonder-engine-sample-ukrainian.png" alt="Ukrainian Wonder Engine sample spread about wind kites and meteorology">
-  <figcaption><em>Ukrainian sample: meteorology, local knowledge, and careful measurement. Artwork generated first; Ukrainian text overlaid afterward.</em></figcaption>
+  <img src="./docs/assets/wonder-engine-sample-ukrainian.png" alt="Ukrainian Wonder Engine sample spread about soil memory, sunflowers, and careful measurement">
+  <figcaption><em>Ukrainian sample: soil memory, plant signals, and patient measurement. Artwork generated first; Ukrainian text overlaid afterward.</em></figcaption>
 </figure>
 
 <figure>
-  <img src="./docs/assets/wonder-engine-sample-japanese.png" alt="Japanese Wonder Engine sample spread about a rain garden and water systems">
-  <figcaption><em>Japanese sample: water systems, memory, and small experiments. Artwork generated first; Japanese text overlaid afterward.</em></figcaption>
+  <img src="./docs/assets/wonder-engine-sample-japanese.png" alt="Japanese Wonder Engine sample spread about paper bridges, fibers, and material testing">
+  <figcaption><em>Japanese sample: paper fibers, load, and material testing. Artwork generated first; Japanese text overlaid afterward.</em></figcaption>
 </figure>
 
 ## The Layout Idea
