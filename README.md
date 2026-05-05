@@ -81,7 +81,7 @@ The image model still creates artwork, not final manuscript text. For localized 
 </figure>
 
 <figure>
-  <img src="./docs/assets/wonder-engine-sample-japanese.png" alt="Japanese Wonder Engine sample spread about paper bridges, fibers, and material testing">
+  <img src="./docs/assets/wonder-engine-sample-japanese-vertical.png" alt="Japanese Wonder Engine sample spread about paper bridges, fibers, and material testing">
   <figcaption><em>Japanese sample: paper fibers, load, and material testing without a machinery-first metaphor. Artwork generated first; vertical Japanese text overlaid afterward.</em></figcaption>
 </figure>
 
