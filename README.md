@@ -71,7 +71,7 @@ There is one limited exception: diagram-like anchor pages can use native image t
 
 ## Multiple Languages
 
-Wonder Engine can shape a book for different languages, scripts, and reading contexts. Language is part of the creative brief: it affects interview questions, source handling, typography, line length, cultural signals, image prompts, and final PDF layout.
+Wonder Engine can shape a book for different languages, scripts, and reading contexts. Language is part of the creative brief: it affects interview questions, source handling, typography, line length, writing direction, cultural signals, image prompts, and final PDF layout.
 
 The image model still creates artwork, not final manuscript text. For localized or multilingual books, the workflow chooses fonts with the right script support and overlays the exact approved text after the illustration is generated.
 
@@ -82,7 +82,7 @@ The image model still creates artwork, not final manuscript text. For localized 
 
 <figure>
   <img src="./docs/assets/wonder-engine-sample-japanese.png" alt="Japanese Wonder Engine sample spread about paper bridges, fibers, and material testing">
-  <figcaption><em>Japanese sample: paper fibers, load, and material testing without a machinery-first metaphor. Artwork generated first; Japanese text overlaid afterward.</em></figcaption>
+  <figcaption><em>Japanese sample: paper fibers, load, and material testing without a machinery-first metaphor. Artwork generated first; vertical Japanese text overlaid afterward.</em></figcaption>
 </figure>
 
 ## The Layout Idea

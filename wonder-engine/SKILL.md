@@ -19,7 +19,7 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Make book titles unique, imaginative, and slightly odd. Present each title as a package with a main title and a subtitle/tagline. Avoid short generic titles unless the user asks for simplicity.
 - Ask about cultural flavor, language, and things to avoid before designing the world. Do not declare or label a cultural inspiration in the book unless the user asks for that.
 - Do not assume a single human child protagonist. Before pitching, establish the lead structure and cast ecology: one lead, two leads, ensemble, animal, human, machine/tool, sentient object, place-as-character, adult-centered, child-centered, or another shape.
-- Ask about typography after the story concept and world direction are clear, usually before illustration blueprint or PDF assembly. Choose fonts for readability, language support, and book personality; avoid generic fallback fonts when better local or supplied fonts are available.
+- Ask about typography after the story concept and world direction are clear, usually before illustration blueprint or PDF assembly. Choose fonts, writing direction, and layout conventions for readability, language support, and book personality; avoid generic fallback fonts when better local or supplied fonts are available.
 - Convert abstract ideas into physical story logic: places, creatures, tools, games, rituals, hazards, maps, songs, weather, craft processes, kitchens, gardens, classrooms, markets, social customs, visible rules, civic systems, or machines when machinery is truly the right metaphor.
 - Do not over-mechanize the book. Machinery is one possible metaphor, not the default language for every concept. For each major source idea, choose the form that best fits the source, culture/language direction, emotional tone, and reader experience.
 - Keep source terminology out of reader-facing titles, subtitles, cast names, world names, and major object names unless the user explicitly asks for technical language. The source concepts are internal scaffolding; the story should reveal them through events.
@@ -314,6 +314,7 @@ When images and text are approved, assemble a proof PDF, then correct layout aga
 - place approved images as page backgrounds
 - typeset exact manuscript text manually into native blank or pale image areas
 - use the chosen font pairing; if the requested language or glyph set is not covered, choose a supported alternative and note it
+- respect the language's chosen writing direction and book convention. For Japanese book-style layouts, use vertical columns flowing right-to-left when that is the intended form; do not default to horizontal left-to-right merely because the layout tool does.
 - do not rely on starter manifest boxes as final placement
 - inspect the real usable pale/low-detail area on each generated image
 - update each page's text zones, split text islands, or regenerate art when the quiet space does not match the text

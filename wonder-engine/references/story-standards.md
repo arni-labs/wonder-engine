@@ -370,6 +370,8 @@ Choose typography as part of the book design, not as an afterthought.
 - Pair expressive headings with steadier body text.
 - Avoid generic fallback fonts when local, bundled, or user-supplied fonts are available.
 - Check glyph coverage for the requested language before committing to a font.
+- Choose the writing direction and page convention deliberately. Some languages have multiple valid conventions; for Japanese book-style layouts, vertical tategaki columns flowing right-to-left may be the appropriate default, while other contexts may call for horizontal text.
+- Balance optical padding inside the actual quiet area for the chosen writing direction. Do not simply reuse left-to-right text boxes for vertical, right-to-left, or mixed-script layouts.
 - Avoid long passages in faux handwriting or decorative display fonts.
 - Render a proof page and adjust size, leading, line length, or font choice before final PDF delivery.
 
