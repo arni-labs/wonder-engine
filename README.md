@@ -2,7 +2,7 @@
 
 **Serious ideas, turned into story-worlds you can wander through.**
 
-Wonder Engine turns papers, research directions, school topics, technical trends, and private fascinations into strange, clever illustrated books. It treats an idea not as a lesson to summarize, but as a world to build: concepts become machines, creatures, maps, rituals, rules, weather, jokes, and trouble.
+Wonder Engine turns papers, research directions, school topics, technical trends, and private fascinations into strange, clever illustrated books. It treats an idea not as a lesson to summarize, but as a world to build: concepts become creatures, maps, rituals, rules, weather, craft, food, games, machines when they truly fit, jokes, and trouble.
 
 The process begins with a creative interview, then moves through source digestion, story architecture, continuity anchors, one-spread-at-a-time image generation, careful text layout, and a polished PDF. The aim is a book with real narrative gravity: odd and science-flavored, visually dense but readable, playful enough for children and layered enough for adults.
 
@@ -17,13 +17,13 @@ A finished Wonder Engine book can include:
 
 - portrait front cover
 - opening character-introduction spread with portraits, avatars, prop cards, or cast vignettes that anchor character continuity
-- opening world-introduction spread with a map, object atlas, concept diagram, or machine/civic system that anchors world logic
+- opening world-introduction spread with a map, object atlas, concept diagram, ritual chart, garden plan, recipe board, machine, or civic system that anchors world logic
 - 20 double-page story spreads by default
 - optional back matter explaining the real idea under the adventure
 - optional portrait back cover with a short blurb, source note, or production credit
 - final PDF with manually typeset story text and audited native labels where useful
 
-The result should feel like an adventure, not a textbook or a captioned storyboard: characters argue, test, misunderstand, repair, escape, and discover. Abstract ideas become visible things: machines, maps, rituals, creatures, tools, diagrams, hazards, and rules.
+The result should feel like an adventure, not a textbook or a captioned storyboard: characters argue, test, misunderstand, repair, escape, and discover. Abstract ideas become visible things: maps, rituals, creatures, tools, diagrams, hazards, rules, gardens, kitchens, weather signs, games, or machines when the story really needs them.
 
 ## How It Works
 
@@ -37,7 +37,7 @@ The result should feel like an adventure, not a textbook or a captioned storyboa
    Imaginative title/tagline packages, lead/cast options, world, core metaphor table, chapter structure, and assumptions.
 
 4. **Optional Visual Probe**  
-   One disposable concept image can test the world, cast ecology, machinery/nature balance, density, and mood before the full story is planned. The probe is for feedback, not canon.
+   One disposable concept image can test the world, cast ecology, material balance, density, and mood before the full story is planned. The probe is for feedback, not canon.
 
 5. **Continuity Bible**  
    The workflow locks character anchors, world rules, recurring objects, map logic, visual motifs, and reusable prompt snippets before main story images are generated.
@@ -76,13 +76,13 @@ Wonder Engine can shape a book for different languages, scripts, and reading con
 The image model still creates artwork, not final manuscript text. For localized or multilingual books, the workflow chooses fonts with the right script support and overlays the exact approved text after the illustration is generated.
 
 <figure>
-  <img src="./docs/assets/wonder-engine-sample-ukrainian.png" alt="Ukrainian Wonder Engine sample spread about soil memory, sunflowers, and careful measurement">
-  <figcaption><em>Ukrainian sample: soil memory, plant signals, and patient measurement. Artwork generated first; Ukrainian text overlaid afterward.</em></figcaption>
+  <img src="./docs/assets/wonder-engine-sample-ukrainian.png" alt="Ukrainian Wonder Engine sample spread about ice acoustics, listening, and patient testing">
+  <figcaption><em>Ukrainian sample: ice acoustics, listening before acting, and patient testing. Artwork generated first; Ukrainian text overlaid afterward.</em></figcaption>
 </figure>
 
 <figure>
   <img src="./docs/assets/wonder-engine-sample-japanese.png" alt="Japanese Wonder Engine sample spread about paper bridges, fibers, and material testing">
-  <figcaption><em>Japanese sample: paper fibers, load, and material testing. Artwork generated first; Japanese text overlaid afterward.</em></figcaption>
+  <figcaption><em>Japanese sample: paper fibers, load, and material testing without a machinery-first metaphor. Artwork generated first; Japanese text overlaid afterward.</em></figcaption>
 </figure>
 
 ## The Layout Idea
@@ -139,7 +139,7 @@ These are examples, not limits. Choose other pairings when the language, culture
 
 ## Illustration Direction
 
-The current skill focuses on whimsical, dense, science-flavored adventure illustration: rich scenes, careful machinery, visible systems, expressive main characters, clean negative space, and simplified background figures.
+The current skill focuses on whimsical, dense, science-flavored adventure illustration: rich scenes, visible systems, expressive main characters, clean negative space, and simplified background figures. Machinery is available when it belongs, but the same workflow can make science visible through paper, weather, gardens, kitchens, music, animals, rituals, maps, games, and everyday experiments.
 
 More illustration style presets are planned for the future. The goal is to support different visual traditions, cultures, languages, moods, and production needs without copying any existing book, artist, character, or protected style.
 

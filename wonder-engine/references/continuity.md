@@ -13,9 +13,15 @@ Include:
 - world logic in three to seven rules
 - map/geography anchors
 - material and color palette
-- recurring machines, instruments, tools, creatures, buildings, rituals, and civic systems
+- approved style references and what each controls: palette, linework, lighting, character design, layout, typography, or density
+- rejected style references or directions that must not return
+- format rules: cover/page aspect ratios, interior panoramic artwork aspect ratio, native vs manual typography policy, and whether interior art must be seamless with no generated fold
+- detail-density rules: what details are meaningful, what texture is allowed, and what micro-detail or visual noise to avoid
+- spread variety board: each spread's setting, lighting, local accent colors, natural textures, machine/tool/craft/nature balance, crowd level, and planned text-space surface
+- recurring systems: machines, instruments, tools, creatures, buildings, gardens, kitchens, maps, rituals, weather patterns, civic systems, or other world logic
 - character anchors
 - approved reference images, if available
+- rejected references or non-canonical generated artifacts, if available
 - prompt snippets to reuse
 - do-not-change notes
 - known risks: characters who may be confused, objects that may drift, rules that may be literalized, and visual details that must stay simple
@@ -40,6 +46,7 @@ Each recurring character needs a stable anchor:
 - do-not-change details
 - reusable prompt snippet
 - approved reference image path, if available
+- known image-generation failure modes, such as wrong hair color, missing eye, extra limb, altered species, changed prop, or accidental age shift
 
 Keep snippets short enough to paste into every relevant image prompt. Example shape:
 
@@ -56,17 +63,18 @@ Track:
 - what kind of place it is
 - map structure: districts, routes, thresholds, important rooms, coastlines, tunnels, streets, towers, labs, markets, or other places
 - what powers the world
-- what machines, creatures, institutions, rituals, or natural forces can and cannot do
+- what machines, tools, creatures, institutions, rituals, plants, weather, kitchens, maps, games, social customs, or natural forces can and cannot do
 - what happens when a rule is broken
 - what the reader should understand visually before the story starts
 - material palette: woods, metals, fabrics, stone, paper, water, smoke, light, plants, weather
 - recurring labels, signs, map marks, or callouts and whether they should be native image text, manual overlay text, or mixed
+- production format constraints, such as seamless panorama, no center crease, no open-book mockup, no page split, and no artificial fold shadow
 - background population rules
 - cultural/language handling
 - do-not-change details
 - reusable prompt snippet
 
-World rules should be specific enough to prevent contradictions. Bad: "The harbor has machines." Better: "Machines must receive stamped brass plates before touching public docks; unapproved machines can hum, calculate, and complain, but cannot move cranes, gates, bridges, or boats."
+World rules should be specific enough to prevent contradictions. Bad: "The harbor has machines." Better: "Machines must receive stamped brass plates before touching public docks; unapproved machines can hum, calculate, and complain, but cannot move cranes, gates, bridges, or boats." For non-machine worlds, make equally concrete rules: "The garden paths change only after rain," "Recipes can remember who stirred them," or "Paper bridges bend before they break, and everyone must listen to the bend."
 
 ## Opening Anchor Spreads
 
@@ -87,12 +95,12 @@ Character spread:
 
 World spread:
 
-- show the map, object atlas, machine diagram, route chart, civic board, cutaway, or other world-native explanation
+- show the map, object atlas, garden plan, recipe board, weather chart, route chart, civic board, cutaway, machine diagram, or other world-native explanation
 - identify where the main story can happen
 - show the rules through visible systems, not long explanation
 - use a locked label sheet for exact labels, short rules, route names, object names, and map marks
 - native image text is allowed for integrated map labels and callouts if the page is proofread carefully
-- include recurring objects/machines in their canonical form
+- include recurring objects, systems, tools, creatures, machines if relevant, and places in their canonical form
 - use this spread as the approved reference for geography and world logic when possible
 
 ## Anchor Label Sheet
@@ -120,7 +128,7 @@ Use native image text mainly for short, visually integrated pieces:
 - badges, signs, route names, and tiny rules
 - short diagram callouts
 
-Use reader-helpful label text. For characters, include a compact role, want, job, or story function, not only the name. For fictional machines, places, creatures, tools, or rituals, include a short function note unless the picture and name make it obvious. Good shape: "No-Bell / means not yet, not failure" or "Ledger Crabs / file shell receipts after machines act."
+Use reader-helpful label text. For characters, include a compact role, want, job, or story function, not only the name. For fictional machines, places, creatures, tools, rituals, recipes, plants, games, or weather signs, include a short function note unless the picture and name make it obvious. Good shape: "No-Bell / means not yet, not failure" or "Paper Tide / rises when promises are too vague."
 
 Avoid native text for long explanations, dense back matter, precise source definitions, cover title/credit, and story body copy.
 
@@ -150,15 +158,22 @@ Before approving a generated image, check:
 
 - Does each recurring character match the anchor?
 - Did clothing, colors, props, species, age, or scale drift?
-- Did a machine or object change function?
+- Did a recurring system, machine, tool, creature, place, or object change function?
 - Did the map/geography contradict the world spread?
 - Did the image introduce unplanned labels, cultures, scripts, symbols, or background characters?
 - Did it make a source metaphor too literal?
 - Did it add details that would force later story changes?
+- Did it introduce a format artifact, such as a center crease, gutter, fold shadow, page seam, page curl, or open-book mockup?
+- Did it drift toward a rejected visual reference or away from the approved reference stack?
+- Did it replace meaningful detail with random texture, speckle, tangled micro-lines, or illegible tiny crowds?
+- Does it overuse the same background machinery, palette balance, location, or composition as nearby spreads?
+- Does it provide the planned natural text-space surface in a calm, low-detail area large enough for the spread's prose?
 
 If an image contains a happy accident, decide explicitly:
 
 - adopt it into the continuity bible, or
 - treat it as non-canonical and avoid repeating it.
+
+If an image contains an error or artifact, such as a missing eye, extra limb, wrong title placement, accidental fold, mangled label, or unintended species change, mark it as non-canonical immediately. Do not let the error become part of the book merely because the rest of the image is attractive.
 
 If a user changes a continuity anchor, update the bible first. Then revise all affected prompts, story beats, image prompts, and final text.

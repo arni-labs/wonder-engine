@@ -99,30 +99,49 @@ If the text feels too short, deepen the scene before moving to images: add a dec
 
 ## Opening Front Matter Rules
 
-Before the main story spreads, include two opening double-page spreads unless the user opts out:
+Before the main story spreads, include two opening orientation spreads unless the user opts out:
 
 - character-introduction spread
 - world-introduction spread
 
 The character-introduction spread should introduce the cast as portraits, avatars, small vignettes, prop cards, workshop tags, ship rosters, classroom cards, market notices, specimen plates, or another world-native format. Keep the cast readable: large clean figures, clear silhouettes, short descriptions, and no crowded tiny faces.
 
-The world-introduction spread should introduce the setting and the book's physical logic. Use a map, cutaway, route chart, object atlas, machine diagram, weather chart, market plan, civic board, tool table, or another format that belongs to the story world. It should show where the adventure can happen and which objects or systems will matter.
+The world-introduction spread should introduce the setting and the book's physical logic. Use a map, cutaway, route chart, object atlas, weather chart, garden plan, recipe board, ritual calendar, market plan, civic board, tool table, machine diagram, or another format that belongs to the story world. It should show where the adventure can happen and which objects or systems will matter.
 
 Opening labels should pass a reader-usefulness test. A character card should not only name the character; it should briefly say who they are or what they do in the story. A world label should briefly explain a fictional object, place, creature, machine, rule, or ritual when the name alone is not self-explanatory. Do not explain ordinary things the reader can infer visually unless they have a special world function.
 
 These spreads are also continuity anchors. They should match the internal continuity bible and establish stable character appearances, recurring props, map logic, machines, materials, scale, and world rules. If the user approves these spreads, treat their intentional details as canonical for later prompts. Do not let accidental errors become canon unless the user explicitly likes them and the continuity bible is updated.
 
-These spreads may be more diagrammatic than story spreads, but they still need charm and implied life: a hand pointing, a tiny incident, a mislabeled object being corrected, a machine blinking, a route being drawn, a creature moving a marker, or another small visible action.
+These spreads may be more diagrammatic than story spreads, but they still need charm and implied life: a hand pointing, a tiny incident, a mislabeled object being corrected, a route being drawn, a creature moving a marker, a recipe being tested, a plant bending toward light, a weather sign changing, or another small visible action.
+
+When generating these spreads as images, prompt them as seamless flat panoramic artwork, not as an opened book. The PDF layout can place the artwork across pages later; the image model should not draw a center crease, gutter, page split, fold shadow, binding, or page curl.
 
 ## Continuity Rules
 
 - Keep a continuity bible before generating main story images.
 - Reuse concise character and world anchor snippets in every relevant image prompt.
 - Use approved character/world intro spreads as visual references when the environment supports reference images.
-- If reference images are unavailable, describe stable anchors directly: silhouette, colors, clothing, materials, props, scale, gestures, map position, and machine function.
+- Track approved and rejected visual references. If a generated image drifts toward a rejected reference, reset the prompt stack to the approved references and explicitly remove the rejected direction.
+- If reference images are unavailable, describe stable anchors directly: silhouette, colors, clothing, materials, props, scale, gestures, map position, and recurring object/system function.
 - Review every generated image for character drift, prop drift, world-rule drift, cultural/language drift, and accidental additions.
 - Adopt happy accidents only after updating the continuity bible.
+- Mark errors and artifacts as non-canonical immediately unless the user explicitly adopts them. Examples include missing eyes, extra limbs, wrong hair color, mangled props, unintended page creases, or accidental world rules.
 - When a character or world rule changes, update affected manuscript text, prompts, images, and labels.
+
+## Visual Variety Rules
+
+Before production image generation, make a spread-by-spread visual variety board. For each spread, specify:
+
+- primary location
+- lighting and time of day
+- local accent colors within the approved palette
+- natural materials and greenery/nature level
+- machine/tool/craft/nature balance: none, background, focal, or overwhelming by design
+- crowd level
+- main shape/composition
+- named natural text-space surface
+
+The book should feel like one world, not one repeated backdrop. Reuse palette anchors and character design, but vary the reader's visual experience: market, kitchen, quay, garden, dock, council room, under-quay chamber, map, storm bowl, roofline, canal, workshop, monsoon exterior, quiet aftermath, or other story-specific settings. Machinery should appear when it matters to the scene's action or world logic; it should not fill every background by default. Science can be visible through listening, counting, testing, tending, cooking, comparing, folding, mapping, sorting, or watching living systems change.
 
 ## Illustration Prompt Rules
 
@@ -146,12 +165,12 @@ Characters:
 [Only necessary main characters. Include appearance, action, and expression.]
 
 Composition:
-- [Cover portrait or double-page landscape spread.]
+- [Cover portrait, jacket/wraparound, or seamless flat landscape panorama for interior spread art.]
 - [Native text-space plan matched to the final text length.]
 - Text space should be a natural blank or pale part of the scene: open sky, fog, wall, paper-white, snow, doorway light, water reflection, smoke, cloud, calm watercolor wash, or an optional object-shaped area.
 - The illustrated world should end or open around the text space; do not wipe art away with a generic side gradient.
-- No visible center fold, crease, or gutter.
-- Keep important faces, hands, signs, and machinery away from page edges and gutter.
+- For interior panoramic art: one continuous flat canvas, not an opened book; no visible center fold, crease, gutter, vertical page split, binding shadow, page curl, hinge, or darkened middle.
+- Keep important faces, hands, signs, labels, and machinery away from page edges and the central join-safe area.
 - Main action in foreground or midground.
 - Background figures simple: silhouettes, animals, tools, boats, buildings, plants, or machines.
 
@@ -159,7 +178,7 @@ Style:
 - colorful ink and watercolor feel
 - dense but readable details
 - warm, clever, kid-friendly science adventure
-- careful machines, maps, labels, cutaways, and diagrams where useful
+- careful machines, maps, labels, cutaways, diagrams, craft processes, natural systems, and experiments where useful
 - no photorealism, horror, harsh realism, sterile sci-fi, or imitation of a specific artist
 
 Text handling:
@@ -174,7 +193,8 @@ Text handling:
 Prefer the hybrid approach:
 
 - Use the image model for atmospheric text only when exact wording is not critical, such as tiny signs, labels, map fragments, machine tags, shop names, or one- to three-word jokes.
-- Typeset body text, chapter labels, scene headings, cover title, author credit, and important speech bubbles after image generation.
+- Typeset body text, chapter labels, scene headings, cover title, author credit, and important speech bubbles after image generation by default.
+- If the human wants native image lettering for a cover or title page, treat it as a proof-first exception. Preserve any approved cover composition when making targeted typography changes; if the user asks to move only the subtitle or author credit, do not redesign the whole cover.
 - Character-introduction and world-introduction spreads are an exception: they may use native image text for integrated labels, names, badges, role notes, map marks, arrows, object names, and very short explanations when the layout would otherwise become stiff or hard to align manually.
 - Before generating native text on anchor spreads, create a locked label sheet with exact spellings and short callouts. For each important character or fictional world element, include both the name and a brief reader-helpful explanation. After generation, audit every label against that sheet. Regenerate or manually correct errors before approval.
 - Keep native anchor-spread text short. Prefer names plus one-line descriptions, concise diagram labels, and tiny function notes. Do not ask the image model to render paragraph-length explanations.
@@ -198,7 +218,7 @@ Match text area to text load. Avoid leaving a full blank half-spread for tiny te
 
 Good native text spaces:
 
-- broad paper-white or pale watercolor areas where the world, characters, and machinery gather around the edges
+- broad paper-white or pale watercolor areas where the world, characters, action, and useful detail gather around the edges
 - pale sky left open between rooftops
 - white sail, tent wall, poster board, lab sheet, map margin, notebook page, snowbank, fog bank, wave foam, blank wall, window light, or cloud plume
 - object-shaped negative space that belongs to the scene
@@ -360,12 +380,19 @@ Choose typography as part of the book design, not as an afterthought.
 - Background architecture and crowds should be simplified.
 - Avoid many tiny detailed human faces.
 - Avoid overstuffing the image with motifs that do not affect the scene.
-- Prefer one memorable machine or visual system per spread.
+- Prefer one memorable visual system per spread: a machine, garden, map, kitchen, weather pattern, game, route, animal behavior, craft process, or other story-specific system.
+- Detail must be structural and readable, not decorative noise. Prefer larger meaningful marks: gears that matter, ropes that guide action, tile bands, labels, tools, faces, shells, doors, and map routes.
+- Avoid random scratch texture, speckled surfaces for no reason, lace-like tiny pipes, illegible micro-crowds, and repeated small marks that collapse into static at print size.
+- Texture should explain material: stone edges, worn brass, fabric folds, painted tile, wood grain, water sparkle, smoke, or paper fiber when relevant.
+- Use a detail budget. Pick the few things the reader should notice on this spread and make those rich; simplify the rest into clean, calm shapes.
+- Do not use machinery as filler. A machine detail should reveal a rule, cause a problem, solve a problem, frame text space, or show where the characters are. When the idea can live more naturally as paper, water, sound, food, weather, plants, bodies, maps, or social behavior, use that instead.
 
 ## Text Layout Rules
 
 - Typeset final body text outside the image model by default.
 - Use clean white or pale native text areas unless the user requests another treatment.
+- Every story spread needs a named natural negative-space plan before generation, sized for the actual prose. Good choices include pale sky, plaster wall, blank sail, awning underside, mist bank, water reflection, paper notice, doorway light, garden wall, smoke plume, or a large quiet map margin.
+- If the generated art does not include the planned calm text area, regenerate or revise the art. Do not place body text over busy art and do not cut real story substance merely because the art failed to leave room.
 - Keep line lengths comfortable.
 - Use readable storybook typography.
 - Keep generous margins.

@@ -30,7 +30,7 @@ The interview should surface:
 Recommended defaults:
 
 - audience: curious children with adult-friendly depth
-- book size: full book, front cover plus character-introduction spread, world-introduction spread, 20 double-page story spreads, and optional back cover
+- book size: full book, front cover plus character-introduction spread, world-introduction spread, 20 interior story spreads, and optional back cover
 - output: full illustrated PDF
 - interview style: natural editorial conversation with optional choices
 - story mode: adventure with comic science and emotional stakes
