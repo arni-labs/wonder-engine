@@ -372,6 +372,7 @@ Choose typography as part of the book design, not as an afterthought.
 - Check glyph coverage for the requested language before committing to a font.
 - Choose the writing direction and page convention deliberately. Some languages have multiple valid conventions; for Japanese book-style layouts, vertical tategaki columns flowing right-to-left may be the appropriate default, while other contexts may call for horizontal text.
 - Balance optical padding inside the actual quiet area for the chosen writing direction. Do not simply reuse left-to-right text boxes for vertical, right-to-left, or mixed-script layouts.
+- For irregular native text surfaces such as deckled paper, sails, fog, or wall openings, measure the safe interior after the image exists. Then compare it with the rendered text-group bounding box and adjust the whole group, not individual columns, until margins feel balanced. Eyeballed coordinates often leave too much space on one side.
 - Avoid long passages in faux handwriting or decorative display fonts.
 - Render a proof page and adjust size, leading, line length, or font choice before final PDF delivery.
 

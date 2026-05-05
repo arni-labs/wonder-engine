@@ -321,6 +321,7 @@ When images and text are approved, assemble a proof PDF, then correct layout aga
 - shape text blocks to the actual quiet area rather than defaulting to a rectangle when the whitespace is curved, tapered, or broken by illustration
 - when available, run the negative-space fitting helper before final assembly so `line_shape` rows are derived from the actual art, then inspect the proof visually
 - preserve safe margins and internal padding; a text box should sit inside the calm area, not touch the visible or soft-fade boundary of that area
+- after rendering, measure or visually mark the actual quiet-area bounds and the rendered text-group bounds. Equalize optical padding in the relevant axis before approval; for vertical Japanese text, this means balancing left/right space around the full right-to-left column group, not only the title column.
 - avoid busy art behind text
 - include front cover, story spreads, optional front/back matter, and optional back cover
 - check page order, title, author credit, chapter title placement, readability, character continuity, and world-rule continuity
