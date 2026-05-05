@@ -17,6 +17,7 @@ Include:
 - rejected style references or directions that must not return
 - format rules: cover/page aspect ratios, interior panoramic artwork aspect ratio, native vs manual typography policy, and whether interior art must be seamless with no generated fold
 - detail-density rules: what details are meaningful, what texture is allowed, and what micro-detail or visual noise to avoid
+- detail-island rules: which two or three clusters per spread can be rich, and which surfaces must stay broad, quiet, and free of all-over texture
 - spread variety board: each spread's setting, lighting, local accent colors, natural textures, machine/tool/craft/nature balance, crowd level, and planned text-space surface
 - recurring systems: machines, instruments, tools, creatures, buildings, gardens, kitchens, maps, rituals, weather patterns, civic systems, or other world logic
 - character anchors
@@ -166,6 +167,8 @@ Before approving a generated image, check:
 - Did it introduce a format artifact, such as a center crease, gutter, fold shadow, page seam, page curl, or open-book mockup?
 - Did it drift toward a rejected visual reference or away from the approved reference stack?
 - Did it replace meaningful detail with random texture, speckle, tangled micro-lines, or illegible tiny crowds?
+- Did it create an all-over rain/grid/hatch/stipple/crinkled-paper pattern across unrelated surfaces?
+- Are there broad calm fields, or is the entire image equally busy?
 - Does it overuse the same background machinery, palette balance, location, or composition as nearby spreads?
 - Does it provide the planned natural text-space surface in a calm, low-detail area large enough for the spread's prose?
 

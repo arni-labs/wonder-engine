@@ -386,6 +386,9 @@ Choose typography as part of the book design, not as an afterthought.
 - Texture should explain material: stone edges, worn brass, fabric folds, painted tile, wood grain, water sparkle, smoke, or paper fiber when relevant.
 - Use a detail budget. Pick the few things the reader should notice on this spread and make those rich; simplify the rest into clean, calm shapes.
 - Do not use machinery as filler. A machine detail should reveal a rule, cause a problem, solve a problem, frame text space, or show where the characters are. When the idea can live more naturally as paper, water, sound, food, weather, plants, bodies, maps, or social behavior, use that instead.
+- Use the detail-island rule: choose two or three visual clusters that can be richly drawn, then keep the remaining fields broad and quiet. A dense world does not require dense marks everywhere.
+- Ban all-over texture patterns unless the scene specifically requires rain, woven cloth, or another real material. Avoid global hatching, stippling, crosshatched grids, decorative mesh, filigree pipes, repeated dots, repeated hatch strokes, crinkled-paper grain, crumpled parchment texture, and "rain" texture laid evenly across unrelated surfaces.
+- Calm fields may be nearly flat color or gentle wash. Sky, plaster, sails, water, floors, and text zones should not be automatically filled with texture to prove they are illustrated.
 
 ## Text Layout Rules
 
