@@ -69,6 +69,22 @@ That keeps the book readable, correctable, and easier to translate. It also mean
 
 There is one limited exception: diagram-like anchor pages can use native image text for short integrated labels, names, badges, map marks, arrows, and tiny callouts when those labels need to live inside the art. This is mainly for pages such as cast introductions, world maps, object atlases, or concept diagrams. Those labels should be brief and reader-helpful, and they must be checked against a locked label sheet before approval.
 
+## Multiple Languages
+
+Wonder Engine can shape a book for different languages, scripts, and reading contexts. Language is part of the creative brief: it affects interview questions, source handling, typography, line length, cultural signals, image prompts, and final PDF layout.
+
+The image model still creates artwork, not final manuscript text. For localized or multilingual books, the workflow chooses fonts with the right script support and overlays the exact approved text after the illustration is generated.
+
+<figure>
+  <img src="./docs/assets/wonder-engine-sample-ukrainian.png" alt="Ukrainian Wonder Engine sample spread about wind kites and meteorology">
+  <figcaption><em>Ukrainian sample: meteorology, local knowledge, and careful measurement. Artwork generated first; Ukrainian text overlaid afterward.</em></figcaption>
+</figure>
+
+<figure>
+  <img src="./docs/assets/wonder-engine-sample-japanese.png" alt="Japanese Wonder Engine sample spread about a rain garden and water systems">
+  <figcaption><em>Japanese sample: water systems, memory, and small experiments. Artwork generated first; Japanese text overlaid afterward.</em></figcaption>
+</figure>
+
 ## The Layout Idea
 
 Wonder Engine does not simply paste text over a white rectangle.
