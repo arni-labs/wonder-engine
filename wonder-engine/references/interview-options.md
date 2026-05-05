@@ -105,6 +105,8 @@ Then proceed to the concept pitch unless a major answer is missing.
 
 After the concept pitch, offer a lightweight visual probe when it would help the user react before story planning. Frame it as disposable: a quick world/mood image to test whether the direction feels right, not a final spread or fixed character design.
 
+If more than one image model or image tool is available, ask the human which one to use before generating the probe. Recommend GPT Image 2.0 as the tested default for Wonder Engine, but honor another choice.
+
 Required production checkpoint before concept pitch or production:
 
 Ask a bespoke practical question in the language of the current project. Confirm length, current deliverable, cover credit, and whether the book needs back matter or a back cover. The character-introduction and world-introduction spreads are part of the default full book; ask only if the user wants to remove or substantially change them. Do not ask about typography here unless it is already relevant. Do not use a canned sentence like "A few choices..." or "Last practical choice..." across projects.
@@ -297,6 +299,8 @@ Ask what to produce first unless the user already answered it. If the user wants
 ### Concept Visual Probe
 
 Use this only after enough concept anchors exist, usually after the pitch and before the detailed spread plan. It helps the user react to the world before investing in story feedback.
+
+Before generating the probe, confirm image-model choice if the environment has multiple image generators. Keep the nudge gentle: GPT Image 2.0 is the tested default for this skill; other models can be used when the human wants them.
 
 Probe goals:
 

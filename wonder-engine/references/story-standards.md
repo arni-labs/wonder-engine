@@ -126,6 +126,14 @@ These spreads may be more diagrammatic than story spreads, but they still need c
 
 ## Illustration Prompt Rules
 
+### Image Model Selection
+
+Wonder Engine can use any capable image generator, but do not silently pick among multiple available models or tools. Before the first concept probe or production image, ask the human which image model to use if more than one option is available.
+
+Recommend GPT Image 2.0 as the default tested path for this skill. Other models can be used when the human chooses them, but keep the same safeguards: continuity bible, one-image-at-a-time approval, native-label audit, negative-space layout contract, and PDF proof pass.
+
+Use the native image-generation path in the current environment unless the human explicitly selects an external or alternate model.
+
 Use this structure for each image prompt:
 
 ```text

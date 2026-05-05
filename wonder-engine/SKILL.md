@@ -28,7 +28,8 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Show, do not tell. Prefer characters in situations, making choices, talking, testing, misunderstanding, repairing, escaping, or discovering.
 - Avoid static encyclopedia spreads. Every spread needs a visible event, a character reaction, and a reason the image exists.
 - Keep whimsy causally meaningful. Strange details should reveal character, world rules, source concepts, or consequences.
-- Use the image generation available in the current environment. In Codex, use the native image generation tool; in another setup, use that setup's image generator while preserving the prompt, review, and approval loop.
+- Use the native image generation available in the current environment while preserving the prompt, review, and approval loop.
+- If multiple image models or image-generation tools are available, ask the human which one to use before the first visual probe or production image. Recommend GPT Image 2.0 as the tested default for this skill, while making clear that another image model can be used if the human chooses it.
 - Generate images one at a time unless the user explicitly requests a batch.
 - Use concept images as visual probes, not canon. Generate a simple exploratory image only after the source, world direction, cultural/language handling, lead/cast ecology, key motifs, and avoidances are known or tentatively pitched. Treat feedback from the probe as durable, but do not let the probe lock the final story, character designs, page layout, or illustration system.
 - Use a hybrid text policy: allow native image text for short signs, labels, maps, tiny jokes, and designed front-matter label pages; typeset final story body text separately by default.
@@ -117,6 +118,8 @@ Before presenting title options, perform the scaffolding-leak check in `referenc
 ### 4. Optional Concept Visual Probe
 
 Use this stage when the user asks to see the concept, when the world is hard to imagine, or when early visual feedback would prevent wasted story work.
+
+Before generating the probe, confirm the image model if the environment exposes more than one option. The default recommendation is GPT Image 2.0 because this skill's prompts, native-label policy, and layout-proof workflow are tested there. Do not switch to a different image generator merely because another tool is available.
 
 Do not generate the probe before the idea has enough anchors. Minimum anchors:
 
@@ -244,6 +247,8 @@ For each spread, create a layout contract before image generation:
 Read `references/story-standards.md` for the visual and layout standards.
 
 ### 9. Generate Images
+
+Before the first production image, confirm the selected image model if the human has not already chosen one and more than one model/tool is available. Keep GPT Image 2.0 as the suggested tested path, but honor the human's choice.
 
 Generate the cover and spreads one at a time unless the user asks for a batch. After each image:
 
