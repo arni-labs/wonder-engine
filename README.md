@@ -1,10 +1,10 @@
 # Wonder Engine
 
-Turn serious ideas into strange, clever, illustrated picture-book PDFs.
+**Serious ideas, turned into story-worlds you can wander through.**
 
-Wonder Engine is a reusable book-making workflow. The `wonder-engine/` folder contains the instructions, references, manifest templates, and PDF helpers needed to run the process in a tool-enabled creative environment.
+Wonder Engine turns papers, research directions, school topics, technical trends, and private fascinations into strange, clever illustrated books. It treats an idea not as a lesson to summarize, but as a world to build: concepts become machines, creatures, maps, rituals, rules, weather, jokes, and trouble.
 
-It makes idea-rich children's books from source material like scientific papers, research directions, school topics, technical trends, cultural themes, or adult nonfiction arguments. It interviews the human to draw out source ideas, taste, strange associations, emotional stakes, and original metaphors, then builds a story world, writes a coherent adventure, generates images one spread at a time, and assembles the approved art and exact text into a polished PDF.
+The process begins with a creative interview, then moves through source digestion, story architecture, continuity anchors, one-spread-at-a-time image generation, careful text layout, and a polished PDF. The aim is a book with real narrative gravity: odd and science-flavored, visually dense but readable, playful enough for children and layered enough for adults.
 
 <figure>
   <img src="./docs/assets/wonder-engine-spread.png" alt="Example Wonder Engine spread with shaped text over a whimsical science-adventure illustration">
