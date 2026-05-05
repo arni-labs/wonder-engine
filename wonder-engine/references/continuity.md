@@ -18,6 +18,7 @@ Include:
 - format rules: cover/page aspect ratios, interior panoramic artwork aspect ratio, native vs manual typography policy, and whether interior art must be seamless with no generated fold
 - detail-density rules: what details are meaningful, what texture is allowed, and what micro-detail or visual noise to avoid
 - detail-island rules: which two or three clusters per spread can be rich, and which surfaces must stay broad, quiet, and free of all-over texture
+- texture calibration references, when tested: approved balance, rejected over-texture, and rejected too-flat direction if applicable
 - spread variety board: each spread's setting, lighting, local accent colors, natural textures, machine/tool/craft/nature balance, crowd level, and planned text-space surface
 - recurring systems: machines, instruments, tools, creatures, buildings, gardens, kitchens, maps, rituals, weather patterns, civic systems, or other world logic
 - character anchors

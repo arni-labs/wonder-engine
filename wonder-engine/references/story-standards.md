@@ -390,6 +390,19 @@ Choose typography as part of the book design, not as an afterthought.
 - Ban all-over texture patterns unless the scene specifically requires rain, woven cloth, or another real material. Avoid global hatching, stippling, crosshatched grids, decorative mesh, filigree pipes, repeated dots, repeated hatch strokes, crinkled-paper grain, crumpled parchment texture, and "rain" texture laid evenly across unrelated surfaces.
 - Calm fields may be nearly flat color or gentle wash. Sky, plaster, sails, water, floors, and text zones should not be automatically filled with texture to prove they are illustrated.
 
+## Texture Calibration
+
+When the human flags crinkly, noisy, or overfilled texture but does not want the art to become flat, run a texture ladder before regenerating a whole book. Keep the same scene, composition family, cast, text zone, and story event; vary only the texture/detail instruction.
+
+Use four useful rungs:
+
+- rich but clean: focal detail islands with calm watercolor fields
+- localized texture: texture allowed only where it explains material
+- clean broad washes: fewer marks, cleaner fields, focal details preserved
+- balanced guardrail: explicitly "not flat, not crinkly"
+
+Show the variants together, ask which is best and worst, then record the approved and rejected references in the continuity bible. If the human selects the clean broad-wash version, do not reinterpret that as "too flat"; preserve its calm fields while keeping the focal action expressive.
+
 ## Text Layout Rules
 
 - Typeset final body text outside the image model by default.
