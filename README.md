@@ -1,8 +1,7 @@
 # wonder-engine
 
 <figure>
-  <img src="./docs/assets/wonder-engine-spread.png" alt="Example Wonder Engine story spread with English text typeset into natural watercolor negative space">
-  <figcaption><em>Example spread: English story text is typeset over native quiet space in the illustration.</em></figcaption>
+  <img src="./docs/assets/wonder-engine-hero.png" alt="Wonder Engine hero image showing a whimsical paper-and-brass book-making machine">
 </figure>
 
 **Serious ideas, turned into story-worlds you can wander through.**
@@ -12,6 +11,11 @@ Wonder Engine turns papers, research directions, school topics, technical trends
 The process begins with a creative interview, then moves through source digestion, story architecture, continuity anchors, one-spread-at-a-time image generation, careful text layout, and a polished PDF. The aim is a book with real narrative gravity: odd and science-flavored, visually dense but readable, playful enough for children and layered enough for adults.
 
 ## What It Makes
+
+<figure>
+  <img src="./docs/assets/wonder-engine-spread.png" alt="Example Wonder Engine story spread with English text typeset into natural watercolor negative space">
+  <figcaption><em>Example spread: English story text is typeset over native quiet space in the illustration.</em></figcaption>
+</figure>
 
 A finished Wonder Engine book can include:
 
@@ -153,10 +157,6 @@ Good pairings for this kind of book:
 These are examples, not limits. Choose other pairings when the language, culture, trim size, or book personality calls for it.
 
 ## Illustration Direction
-
-<figure>
-  <img src="./docs/assets/wonder-engine-hero.png" alt="Wonder Engine hero image showing a whimsical paper-and-brass book-making machine">
-</figure>
 
 The current skill focuses on whimsical, dense, science-flavored adventure illustration: rich scenes, visible systems, expressive main characters, clean negative space, and simplified background figures. Machinery is available when it belongs, but the same workflow can make science visible through paper, weather, gardens, kitchens, music, animals, rituals, maps, games, and everyday experiments.
 
