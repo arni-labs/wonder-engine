@@ -1,7 +1,8 @@
-# Wonder Engine
+# wonder-engine
 
 <figure>
-  <img src="./docs/assets/wonder-engine-hero.png" alt="Wonder Engine hero image showing a whimsical paper-and-brass book-making machine">
+  <img src="./docs/assets/wonder-engine-spread.png" alt="Example Wonder Engine story spread with English text typeset into natural watercolor negative space">
+  <figcaption><em>Example spread: English story text is typeset over native quiet space in the illustration.</em></figcaption>
 </figure>
 
 **Serious ideas, turned into story-worlds you can wander through.**
@@ -23,6 +24,15 @@ A finished Wonder Engine book can include:
 - final PDF with manually typeset story text and audited native labels where useful
 
 The result should feel like an adventure, not a textbook or a captioned storyboard: characters argue, test, misunderstand, repair, escape, and discover. Abstract ideas become visible things: maps, rituals, creatures, tools, diagrams, hazards, rules, gardens, kitchens, weather signs, games, or machines when the story really needs them.
+
+## Example Book
+
+<figure>
+  <img src="./docs/assets/examples/maren-knapp-blue-doors-cover.png" alt="Cover preview for Maren and Knapp and the Blue Doors of Norrvik" width="420">
+  <figcaption><em>Maren & Knapp and the Blue Doors of Norrvik: a complete Fjord-story PDF produced with the workflow.</em></figcaption>
+</figure>
+
+[Open the complete PDF](./docs/examples/Maren-and-Knapp-and-the-Blue-Doors-of-Norrvik.pdf)
 
 ## How It Works
 
@@ -143,6 +153,10 @@ Good pairings for this kind of book:
 These are examples, not limits. Choose other pairings when the language, culture, trim size, or book personality calls for it.
 
 ## Illustration Direction
+
+<figure>
+  <img src="./docs/assets/wonder-engine-hero.png" alt="Wonder Engine hero image showing a whimsical paper-and-brass book-making machine">
+</figure>
 
 The current skill focuses on whimsical, dense, science-flavored adventure illustration: rich scenes, visible systems, expressive main characters, clean negative space, and simplified background figures. Machinery is available when it belongs, but the same workflow can make science visible through paper, weather, gardens, kitchens, music, animals, rituals, maps, games, and everyday experiments.
 
