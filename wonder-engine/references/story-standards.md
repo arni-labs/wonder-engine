@@ -127,6 +127,7 @@ When generating these spreads as images, prompt them as seamless flat panoramic 
 - Adopt happy accidents only after updating the continuity bible.
 - Mark errors and artifacts as non-canonical immediately unless the user explicitly adopts them. Examples include missing eyes, extra limbs, wrong hair color, mangled props, unintended page creases, or accidental world rules.
 - When a character or world rule changes, update affected manuscript text, prompts, images, and labels.
+- For sample spreads that demonstrate different languages, source topics, or story directions, treat each sample as a separate book-world unless the human says otherwise. Do not reuse the same faces, silhouettes, ages, clothes, props, sidekick or mentor pattern, or setting composition across those demos. Each sample should feel like a distinct book sharing the Wonder Engine workflow, not the same cast translated into another scene.
 
 ## Visual Variety Rules
 
