@@ -56,7 +56,7 @@ The result should feel like an adventure, not a textbook or a captioned storyboa
    The workflow locks character anchors, world rules, recurring objects, map logic, visual motifs, and reusable prompt snippets before main story images are generated.
 
 6. **Plan the Spreads**  
-   A coherent chapter-by-chapter beat plan where every spread has a visible event, dialogue or reaction, enough story text to read aloud, and a reason to exist.
+   A coherent chapter-by-chapter beat plan built from a plain causal story spine, where every spread has an inbound bridge, visible event, decision or consequence, and outbound bridge.
 
 7. **Write and Prompt**  
    Final spread text, image prompt, composition notes, text-space plan, speech bubble notes, and print safety notes.
@@ -176,6 +176,9 @@ More illustration style presets are planned for the future. The goal is to suppo
 - one-spread-at-a-time image generation and approval
 - natural text-space planning before image generation, with no generic white-card rescue
 - show-don't-tell manuscript rules
+- agent-owned causal story-spine and cold-reader checks
+- spread-to-spread "because/but/therefore" continuity gates
+- whimsy sense audit so clever phrases stay meaningful
 - story-density guidance so spreads become full scenes, not two-sentence captions
 - source-to-story metaphor mapping
 - culture and language intake

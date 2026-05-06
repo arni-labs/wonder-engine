@@ -24,6 +24,9 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Do not over-mechanize the book. Machinery is one possible metaphor, not the default language for every concept. For each major source idea, choose the form that best fits the source, culture/language direction, emotional tone, and reader experience.
 - Keep source terminology out of reader-facing titles, subtitles, cast names, world names, and major object names unless the user explicitly asks for technical language. The source concepts are internal scaffolding; the story should reveal them through events.
 - Keep the story coherent. Each spread must follow from the prior spread and change what can happen next.
+- The agent owns narrative coherence. Do not ask the human to repair plot logic, phrase sense, causal transitions, or story flow. Ask for source facts, taste, and preferences; then perform the story-craft work yourself.
+- Weirdness is allowed; nonsense is not. Every strange phrase, object, joke, or scientific metaphor must have a clear referent in the scene and must advance character, causality, source understanding, stakes, or humor that a cold reader can follow.
+- Before any spread plan, manuscript, image prompt, or production art, create and pass a plain-language causal story spine. If the story cannot be explained without source jargon, hidden context, or "it is about the paper," rewrite the premise before continuing.
 - Keep character and world continuity explicit. Maintain a continuity bible for stable character appearance, props, scale, speech, relationships, map logic, world rules, recurring systems, materials, and no-go changes.
 - Write real story scenes, not captions. Main story spreads should usually carry enough text, dialogue, action, and emotional turn to feel like a page from a book, not a two-sentence storyboard panel.
 - Show, do not tell. Prefer characters in situations, making choices, talking, testing, misunderstanding, repairing, escaping, or discovering.
@@ -41,6 +44,7 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Prevent artificial spread artifacts. For interior panoramic art, prompt for one continuous flat canvas with no center crease, gutter, fold, binding shadow, page split, page curl, hinge, darkened middle, or open-book mockup. Avoid the phrase "double-page spread" in image-generation prompts when it causes the model to draw a physical crease; use "seamless flat panoramic artwork" instead.
 - Keep visual density readable and purposeful. Dense picture-book worlds should use meaningful structural detail, not random texture or repeating machinery wallpaper. Prefer larger readable shapes, clear focal hierarchy, and material-specific marks. Every visible detail should serve story, character, setting, world rule, humor, scale, or text-space framing. Avoid speckle, scratch noise, illegible micro-crowds, tiny tangled pipes, and decorative clutter that collapses at print size.
 - Use detail islands and calm fields. A spread should usually have two or three rich detail clusters, with the rest simplified into broad painted surfaces. Do not allow an all-over texture layer: no rain-like hatching, stippled static, monotone grid marks, decorative mesh, mechanical filigree, repeated tiny strokes, crinkled-paper grain, or crumpled texture covering walls, sky, water, floors, or blank text areas.
+- Keep visual no-go rules at the right scope. Universal skill rules should cover density, hierarchy, readability, and purposeful detail. Topic-specific avoidances, such as "too much machinery" for a particular book, belong in that project's continuity bible, visual reference stack, and prompt capsule rather than as permanent skill law.
 - Do not overcorrect density feedback by flattening the art, aging/redesigning characters, or restaging the scene. When revising for less detail, preserve the approved cast, age, relationships, palette, scene event, and composition family; remove only filler machinery, crinkly microtexture, and unreadable background noise.
 - If the human is unsure how much texture is right, run a small texture ladder on one scene before production. Generate controlled variants from richer to cleaner, ask for the best and worst, then record approved and rejected texture references in the continuity bible.
 - Vary locations, compositions, and local color across the book while staying inside the approved world palette. Do not let every spread become the same machine backdrop, harbor backdrop, laboratory backdrop, or any other repeated visual habit. Build a spread-by-spread variety plan: market, kitchen, office, map, under-quay room, storm bowl, garden/greenery, canal, roof, dock, interior, night exterior, council room, and other story-specific spaces as appropriate.
@@ -48,12 +52,18 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Use a hybrid text policy: allow native image text for short signs, labels, maps, tiny jokes, and designed front-matter label pages; typeset final story body text separately by default.
 - Design text and image space together before image generation. The final or near-final text, word count, and text-load category must be known before prompting each story image. The prompt should tell the image model where the natural light/quiet areas belong and how large they need to be for that specific prose.
 - The blank or pale areas must be part of the illustrated composition, sized to the actual text, not a generic white side panel pasted over art.
+- Story text must land on a readable negative-space surface in the final rendered page, not merely in the prompt. After assembly, audit the actual pixels beneath every text block. If the area is dark, busy, high-contrast, or crosses characters/focal action, revise the art, text placement, or text split before delivery.
+- Do not use huge opaque cards, flat white rectangles, blurred background panels, blobby light patches, or UI-like overlays as a production rescue for story pages. If local integration is needed, bake an irregular world-native surface into the artwork itself, such as sailcloth, plaster, mist, sky, lantern haze, paper, cloth, or water-light, and keep it visually tied to the scene.
+- Do not align text tightly to the edge of a pale surface. The illustrated negative-space surface must be visibly larger than the typeset text block. Reserve generous inner padding on all sides before typesetting: at least 12 percent of the text-surface width horizontally and at least one body-line height vertically, more for young-reader picture books or highly textured art.
+- Treat fade-outs as polish, not structure. A faint fade or local texture calming may only soften a negative-space surface that already exists naturally in the generated/edited artwork. If removing the fade would make the text area disappear, the spread fails and must be regenerated or edited.
 - Prefer broad natural negative space for body text when it fits the scene: open sky, mist, water, snow, pale wall, blank paper-white, or calm watercolor wash. Object-shaped text areas are useful but optional.
 - Fit typeset text to the shape of the negative space. Use gentle line-length changes, offsets, centered titles, or multiple text blocks when the quiet area is curved, tapered, or interrupted.
 - Fit the whole text composition, not only the body paragraph. Chapter label, scene heading, body, speech bubbles, and image quiet space should feel deliberately placed together.
 - On chapter-start spreads, treat the chapter label, chapter title, and body copy as one vertical layout group. Move the chapter title down into the safe quiet area first, then place the body at a fixed comfortable distance below it. Do not fix overlap by lifting body text upward, letting titles sit on the edge of the text area, or shrinking type until it becomes fragile.
 - Preserve the illustrated negative space. For story body text, do not rescue a failed layout by smashing a flat white card or rectangle over the art. A paper, wall, sail, fog bank, label, or wash can hold text only when it was planned as a native part of the scene. If readability needs help, first increase internal padding, adjust line shape, lower the title/body group, split text, or regenerate the art.
 - Treat the first assembled PDF as a layout proof, not the final book. Do a page-by-page correction pass against the actual generated images before calling a PDF finished.
+- Back matter and explanatory pages must be finished illustrated pages too. They may use world-native ledgers, cloth, diagrams, maps, or notes, but do not leave them as abstract mock-up cards over faded art.
+- For cover/title images, do not solve a ratio mismatch with blurred side-fill, dark filler strips, or background padding. Regenerate or outpaint coherent illustrated side continuation so the title composition fits the final cover ratio.
 - Keep the human oriented. At every stage, clearly state what just happened, what decision or artifact comes next, and what kind of feedback would be most useful, without rushing them.
 
 ## Workflow
@@ -131,6 +141,20 @@ Names should be easy to read aloud and easy to typeset. Avoid diacritics unless 
 
 Before presenting title options, perform the scaffolding-leak check in `references/source-processing.md`. Titles should sound like adventure titles, not paper abstracts or internal concept maps.
 
+After the concept pitch, write a plain-language story spine for yourself before planning spreads. The spine should include:
+
+- protagonist or ensemble want
+- practical problem that starts the plot
+- source idea embodied as story-world pressure
+- first failed attempt
+- discovery or rule that changes the plan
+- escalation caused by the characters' choices
+- crisis
+- earned resolution
+- how the world and characters are different at the end
+
+This story spine should sound coherent to a cold reader who has not seen the source. If it only makes sense as an encoded explanation of the paper, rewrite it. Do not ask the human to fix the spine unless a missing source fact or preference is genuinely blocking you.
+
 ### 4. Optional Concept Visual Probe
 
 Use this stage when the user asks to see the concept, when the world is hard to imagine, or when early visual feedback would prevent wasted story work.
@@ -188,6 +212,8 @@ If a generated image contains an artifact, such as a missing eye, extra limb, un
 
 ### 6. Plan Chapters And Spreads
 
+Before writing the chapter/spread plan, run the causal story-spine gate in `references/story-standards.md`. Repair the story yourself until the spine is clear. The human should not have to diagnose why the plot does not work.
+
 Default structure, after the user confirms or accepts it:
 
 - front cover
@@ -204,12 +230,17 @@ For each spread, include:
 - spread number
 - scene title
 - story purpose
+- inbound causal bridge: because of the previous spread, this spread happens
 - what visibly happens
 - who wants what
 - what changes or goes wrong
+- decision, discovery, or consequence at the end of the spread
+- outbound causal bridge: why the next spread must happen
 - characters present
 - source concept, if any
 - substantial draft text, not just a caption or summary
+
+After drafting the plan, write a spread-to-spread causal chain using "because/but/therefore" logic. Do not accept a chain that is mostly "and then." If two adjacent spreads do not connect, reorder, merge, cut, or rewrite them before moving on.
 
 The opening character spread should introduce the cast through portraits, avatars, small vignettes, object props, or another format that fits the book's world. The opening world spread should introduce the place and its key story objects through a map, cutaway, diagram, artifact table, route chart, garden plan, recipe board, weather chart, ritual calendar, machine atlas, or other world-native form. These front-matter spreads should orient the reader visually without becoming static encyclopedia pages, and they should match the internal continuity bible.
 
@@ -234,6 +265,13 @@ Requirements:
 - Do not shorten the manuscript merely because layout is hard. Instead, plan enough native quiet space, split text into two islands, revise the image prompt, or adjust typography while preserving story substance.
 
 Before moving on, run the manuscript against the quality checklist in `references/story-standards.md`.
+
+The manuscript pass is agent-owned. Run a nonsense audit and cold-reader test before image prompts:
+
+- Identify phrases that are clever but unclear; rewrite them until the reader can tell what literally happened.
+- Check that every named object, ritual, machine, creature, rule, or joke has a visible story function.
+- Produce a brief source-free summary of the finished story. If the summary is confusing, rewrite the manuscript and beat chain.
+- Verify every spread starts from the previous spread's consequence and ends with a reason for the next spread.
 
 ### 8. Build The Illustration Blueprint
 
@@ -271,15 +309,25 @@ For each story spread, create a layout contract before image generation. This co
 
 - text load and target word count
 - text zone coordinates, in spread-relative terms or manifest inches
+- native surface bounds, which must be larger than the final text zone
+- inner padding target, with text inset from the native surface edge rather than touching it
 - named natural text-space surface, such as pale sky, plaster wall, blank sail, awning underside, mist bank, calm water reflection, blank signboard, or doorway light
 - text-zone shape: rectangle, oval/cloud, tapered wedge, stepped shape, or two islands
 - text flow: centered title, left body, tapered body, stepped body, or split blocks
 - chapter-start layout, if any: chapter/title box, body box, fixed title-to-body gap, and internal padding from every visible or fuzzy edge of the quiet area
 - image prompt language telling the model where the calm area must be, how large it is relative to the text load, and where action/detail must stop
 - image prompt language telling the model the art is a seamless flat panoramic canvas, not an opened book, with no center crease/gutter/fold
-- proof criteria: text sits on pale low-detail space, follows the quiet shape, remains readable, and does not collide with figures, machinery, buildings, or color
+- proof criteria: the native surface is visible before typesetting, the text sits inside it with padding, the surface is pale and low-detail, the text follows the quiet shape, and nothing collides with figures, machinery, buildings, or color
 
-If the generated image does not contain the required natural text space, regenerate. Do not solve the problem by shrinking the manuscript into a caption, placing text over busy art, adding a flat white card, or accepting a beautiful image that cannot carry the story.
+Run a native text-zone acceptance pass before typesetting:
+
+1. View the generated image with no text.
+2. Mark the intended native surface bounds and the smaller typeset bounds.
+3. Confirm the surface exists as an object, material, atmospheric field, or naturally calm area in the scene, not as a soft blob or blank overlay.
+4. Confirm characters, important props, signage, action, and dense machinery do not enter the typeset bounds or the padding zone.
+5. Confirm the text zone could remain understandable if no extra fade were added.
+
+If the generated image does not contain the required natural text space, regenerate or edit the image. Do not solve the problem by shrinking the manuscript into a caption, placing text over busy art, adding a flat white card, painting a loose blob behind the text, or accepting a beautiful image that cannot carry the story.
 
 Read `references/story-standards.md` for the visual and layout standards.
 
@@ -310,6 +358,8 @@ After every generated image, also perform a format and artifact audit:
 - recurring characters have required features, colors, props, and scale
 - density is readable at print size, with meaningful detail instead of decorative noise
 - text-space contract is honored with a calm, natural, low-detail area large enough for the final prose
+- text-space surface is a real part of the scene, such as sail, wall, sky, mist, cloth, paper, doorway light, or water reflection, not a post-hoc blob, card, blur, or generic fade
+- text-space surface has enough margin for typeset text to be inset from every edge
 - the spread has a distinct local setting, color accent, and composition compared with adjacent spreads
 
 If a generated image is compositionally approved but needs a small typography or layout adjustment, preserve the approved composition and request only that adjustment. Do not regenerate a broad redesign unless the human asks for one.
@@ -330,6 +380,7 @@ When images and text are approved, assemble a proof PDF, then correct layout aga
 - shape text blocks to the actual quiet area rather than defaulting to a rectangle when the whitespace is curved, tapered, or broken by illustration
 - when available, run the negative-space fitting helper before final assembly so `line_shape` rows are derived from the actual art, then inspect the proof visually
 - preserve safe margins and internal padding; a text box should sit inside the calm area, not touch the visible or soft-fade boundary of that area
+- enforce native-surface padding after rendering. The final text block should normally occupy no more than about 75 percent of the native surface width and no more than about 80 percent of its height, unless the surface is an intentionally shaped column or banner with equivalent optical padding.
 - after rendering, measure or visually mark the actual quiet-area bounds and the rendered text-group bounds. Equalize optical padding in the relevant axis before approval; for vertical Japanese text, this means balancing left/right space around the full right-to-left column group, not only the title column.
 - avoid busy art behind text
 - include front cover, story spreads, optional front/back matter, and optional back cover
@@ -338,6 +389,7 @@ When images and text are approved, assemble a proof PDF, then correct layout aga
 - on chapter-start spreads, check the chapter label, chapter title/heading, and body as a single group: they must share the same quiet area, align intentionally, keep enough vertical spacing, and never overlap. When correcting them, lower the title into the safe area and then lower the body to maintain the same gap; do not move body text upward over the title.
 - avoid introducing flat white readability panels during correction. The existing illustrated negative space is usually intentional; protect it and fit the text within it. If the image lacks usable quiet space, regenerate rather than covering the art with a card unless the human explicitly asks for that graphic treatment.
 - for story body text, final manifests should not use opaque panel fields such as `background_fill`, `background_alpha`, `background_padding_in`, `background_radius_in`, or background outlines unless the human explicitly asks for a graphic card treatment. Remove those fields during final assembly and fit the text into world-native quiet areas instead.
+- do not mistake a readability patch for a native text surface. If the proof shows a blobby fade, visible rectangle, blurred side fill, or text nearly touching the pale shape, mark the spread as failed and regenerate/edit the underlying art.
 - when the human reports a layout problem, compare the rendered preview and the actual final PDF, then make the smallest targeted manifest change that addresses the named page or issue. Do not redesign nearby pages or repeatedly nudge unrelated layout variables.
 
 Use `scripts/new_manifest.py` to create a layout manifest and `scripts/assemble_picture_book_pdf.py` for proof and final raster PDFs:

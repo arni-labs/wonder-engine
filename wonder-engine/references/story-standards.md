@@ -2,6 +2,38 @@
 
 Use this checklist while writing beats, manuscript, image prompts, and PDF layouts.
 
+## Agent-Owned Narrative Craft
+
+The agent is responsible for making the story coherent, causal, and readable without hidden knowledge of the source. Do not ask the human to fix plot logic, connect spreads, or identify which whimsical phrases are confusing. Ask the human for source facts, preferences, and taste; then revise the story yourself.
+
+The book may be strange, witty, scientific, and dreamlike, but it must not be nonsensical. A cold reader should understand:
+
+- who the story is about
+- what they want
+- what goes wrong
+- what they try
+- why each attempt causes the next event
+- what they learn through action
+- why the ending resolves the actual story problem
+
+## Causal Story Spine Gate
+
+Before chapter planning, spread planning, manuscript writing, image prompts, or production images, write a plain story spine in non-whimsical language. It is internal scaffolding, not final prose.
+
+Required shape:
+
+1. The lead or ensemble wants [concrete desire].
+2. The world has [specific pressure/problem] that makes the desire hard.
+3. The source idea becomes [physical story-world rule, force, practice, creature, place, tool, or social custom].
+4. The first attempt fails because [clear causal reason].
+5. The characters discover [new rule/limit/relationship].
+6. Their next choice causes [escalation].
+7. The crisis forces [hard decision or tradeoff].
+8. The resolution works because [earned change in understanding, tool, relationship, or system].
+9. By the end, [character and world change].
+
+Fail the spine if it relies on source jargon, secret paper knowledge, vibes, "and then" sequencing, unexplained magical logic, or a lesson statement instead of a plot. Repair it by changing motivation, conflict, sequence, metaphor, or ending before continuing.
+
 ## Show-Do-Not-Tell Test
 
 Every spread should answer yes to most of these:
@@ -18,11 +50,39 @@ If a spread only describes a place, convert it into an incident in that place.
 
 ## Coherence Test
 
-For each spread, write one sentence:
+After the spread plan, create a causal chain for the whole book. For each spread transition, write one sentence:
 
 Because spread N happened, spread N+1 must happen.
 
-If that sentence is weak, revise the beat. Whimsy can be surprising, but it should not feel randomly shuffled.
+Prefer "because," "but," and "therefore" transitions. Treat "and then" as a warning sign. If the sentence is weak, revise the beat yourself: reorder, merge, cut, or rewrite spreads until every page changes what can happen next. Whimsy can be surprising, but it should not feel randomly shuffled.
+
+For each spread, also record:
+
+- inbound bridge: what previous consequence causes this moment
+- present action: what someone wants and does now
+- turn: what changes by the end
+- outbound bridge: why the next spread must happen
+
+## Cold-Reader Test
+
+Before image prompts, summarize the story in 5 to 8 plain sentences without naming the source, paper, trend, hidden technical concept, or internal metaphor table. The summary should make sense as a children's adventure.
+
+If the summary is confusing, abstract, or mostly a list of symbolic set pieces, rewrite the manuscript and spread chain. Do not proceed to images.
+
+## Whimsy Sense Audit
+
+Strange language is welcome only when the reader can infer what it means from the scene. Audit every quirky phrase, object, creature, ritual, machine, sign, and joke.
+
+Keep it if it does at least one job:
+
+- reveals character
+- creates or resolves a consequence
+- clarifies the source idea through action
+- raises stakes
+- makes a visible joke the reader can understand
+- sets up a later payoff
+
+Cut or rewrite it if it is merely decorative, sounds clever but has no literal scene meaning, requires the source paper to decode, interrupts causal flow, or could be swapped into another spread without changing the story.
 
 ## Manuscript Rules
 
@@ -65,9 +125,12 @@ Avoid:
 Each spread needs:
 
 - scene title
+- inbound causal bridge from the prior spread
 - visible event
 - character desire
 - obstacle or discovery
+- end-of-spread turn: decision, discovery, failure, consequence, or emotional shift
+- outbound causal bridge into the next spread
 - source concept, if any
 - image-worthy action
 - substantial draft text with dialogue or visible reaction, action, consequence, and a final turn toward the next spread
