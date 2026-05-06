@@ -158,7 +158,7 @@
       "chapter_label": "CHAPTER 1",
       "heading": "Scene Heading",
       "text": "Replace with final manuscript text for this spread.",
-      "native_text_space": "Illustration contains a calm blank or pale area sized for this text; do not render a generic panel over the art.",
+      "native_text_space": "Illustration contains a calm blank or pale area sized for this text before image generation; do not render a generic panel or late white card over the art.",
       "text_blocks": [
         {
           "role": "chapter_label",
@@ -204,7 +204,7 @@
     {
       "type": "back_cover",
       "image": "images/back-cover.png",
-      "native_text_space": "Portrait back-cover art leaves a calm text area for a short blurb, source note, or production credit.",
+      "native_text_space": "Distinct portrait back-cover art leaves a calm native text area for a short blurb, source note, or production credit.",
       "text_blocks": [
         {
           "role": "heading",

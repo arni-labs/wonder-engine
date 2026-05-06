@@ -36,6 +36,8 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Keep an explicit visual reference stack once production art begins: approved references, rejected references, and what each reference controls. If the human says a later image drifted or resembles a rejected sample, reset the prompt stack to the approved reference only and say what is being removed.
 - For independent sample spreads, language demos, or separate book concepts, do not reuse the same cast silhouettes, faces, ages, clothing, props, setting, or mentor archetype unless continuity is intentional. Treat each sample as its own book-world and actively prevent visual leakage from earlier samples.
 - Treat cover art and interior spread art as different formats. A front cover/title page is normally a single portrait page; interior spread art is normally one seamless flat landscape canvas that will be placed across two pages later. Do not ask the image model to draw an opened book.
+- Generate cover, title, hero, spread, and back-cover art at the needed canvas shape from the start. Do not crop an approved image into a different aspect ratio as a design solution. A tiny safe trim is acceptable only when it does not remove important composition, title space, negative space, or story action; otherwise regenerate or extend the image for the correct ratio.
+- If a back cover is part of the agreed/default output, generate it as its own finished image and include it in the PDF. Do not leave a placeholder, reuse the front cover, or silently skip it.
 - Prevent artificial spread artifacts. For interior panoramic art, prompt for one continuous flat canvas with no center crease, gutter, fold, binding shadow, page split, page curl, hinge, darkened middle, or open-book mockup. Avoid the phrase "double-page spread" in image-generation prompts when it causes the model to draw a physical crease; use "seamless flat panoramic artwork" instead.
 - Keep visual density readable and purposeful. Dense picture-book worlds should use meaningful structural detail, not random texture or repeating machinery wallpaper. Prefer larger readable shapes, clear focal hierarchy, and material-specific marks. Every visible detail should serve story, character, setting, world rule, humor, scale, or text-space framing. Avoid speckle, scratch noise, illegible micro-crowds, tiny tangled pipes, and decorative clutter that collapses at print size.
 - Use detail islands and calm fields. A spread should usually have two or three rich detail clusters, with the rest simplified into broad painted surfaces. Do not allow an all-over texture layer: no rain-like hatching, stippled static, monotone grid marks, decorative mesh, mechanical filigree, repeated tiny strokes, crinkled-paper grain, or crumpled texture covering walls, sky, water, floors, or blank text areas.
@@ -44,12 +46,13 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Vary locations, compositions, and local color across the book while staying inside the approved world palette. Do not let every spread become the same machine backdrop, harbor backdrop, laboratory backdrop, or any other repeated visual habit. Build a spread-by-spread variety plan: market, kitchen, office, map, under-quay room, storm bowl, garden/greenery, canal, roof, dock, interior, night exterior, council room, and other story-specific spaces as appropriate.
 - Treat natural negative space as a hard production requirement, not a hopeful prompt detail. Every story spread prompt must name a specific quiet area sized for the final text load: pale sky, plaster wall, blank sail, awning underside, mist, water reflection, paper notice, doorway light, sand, snow, smoke, garden wall, or another world-native calm surface.
 - Use a hybrid text policy: allow native image text for short signs, labels, maps, tiny jokes, and designed front-matter label pages; typeset final story body text separately by default.
-- Design text space before image generation. The blank or pale areas must be part of the illustrated composition, sized to the actual text, not a generic white side panel pasted over art.
+- Design text and image space together before image generation. The final or near-final text, word count, and text-load category must be known before prompting each story image. The prompt should tell the image model where the natural light/quiet areas belong and how large they need to be for that specific prose.
+- The blank or pale areas must be part of the illustrated composition, sized to the actual text, not a generic white side panel pasted over art.
 - Prefer broad natural negative space for body text when it fits the scene: open sky, mist, water, snow, pale wall, blank paper-white, or calm watercolor wash. Object-shaped text areas are useful but optional.
 - Fit typeset text to the shape of the negative space. Use gentle line-length changes, offsets, centered titles, or multiple text blocks when the quiet area is curved, tapered, or interrupted.
 - Fit the whole text composition, not only the body paragraph. Chapter label, scene heading, body, speech bubbles, and image quiet space should feel deliberately placed together.
 - On chapter-start spreads, treat the chapter label, chapter title, and body copy as one vertical layout group. Move the chapter title down into the safe quiet area first, then place the body at a fixed comfortable distance below it. Do not fix overlap by lifting body text upward, letting titles sit on the edge of the text area, or shrinking type until it becomes fragile.
-- Preserve the illustrated negative space. Do not cover a world-native pale wash, mist, sky, wall, or paper area with a flat white panel unless the human explicitly wants that graphic treatment. If readability needs help, first increase internal padding, adjust line shape, lower the title/body group, split text, or regenerate the art; if a panel is unavoidable, make it subtle and scene-matched rather than straight white.
+- Preserve the illustrated negative space. For story body text, do not rescue a failed layout by smashing a flat white card or rectangle over the art. A paper, wall, sail, fog bank, label, or wash can hold text only when it was planned as a native part of the scene. If readability needs help, first increase internal padding, adjust line shape, lower the title/body group, split text, or regenerate the art.
 - Treat the first assembled PDF as a layout proof, not the final book. Do a page-by-page correction pass against the actual generated images before calling a PDF finished.
 - Keep the human oriented. At every stage, clearly state what just happened, what decision or artifact comes next, and what kind of feedback would be most useful, without rushing them.
 
@@ -239,6 +242,7 @@ For every cover, spread, and back cover, create:
 - final text
 - image prompt
 - composition notes
+- target canvas format and aspect ratio: portrait cover/back cover, jacket/wraparound, or seamless landscape interior; regenerate rather than crop when the generated image has the wrong shape
 - text rendering mode: manual, native, or mixed
 - text area placement and approximate word count
 - native negative-space plan, such as open sky, mist, water, snow, pale wall, paper-white, calm watercolor wash, or an optional object-shaped area
@@ -253,7 +257,9 @@ For every cover, spread, and back cover, create:
 
 Before production image generation, make a simple visual-variety board for the whole book. For each spread, choose the dominant setting, lighting, local accent colors, natural materials, machine/tool/craft/nature balance, crowd level, and text-space surface. Machinery should appear when it matters to the scene, not as a default background texture. A book can be science-flavored through plants, sound, recipes, paper fibers, animal behavior, weather, games, maps, social rules, experiments, or observation without turning every idea into an engine. The approved palette can stay coherent, but each spread should have a distinct local read.
 
-For cover/title-page art, decide whether it is portrait single-page art, landscape wraparound art, or a full jacket before prompting. A normal front cover is a portrait single page even when interior artwork is landscape. Cover title, subtitle, and author credit are precision typography: typeset them manually by default unless the human wants native image lettering. If native cover typography is used, generate a proof, then preserve any approved composition when making targeted text-placement changes. If the user asks to move only the subtitle or author line, do not redesign the whole cover.
+For cover/title-page art, decide whether it is portrait single-page art, landscape wraparound art, or a full jacket before prompting. A normal front cover is a portrait single page even when interior artwork is landscape. If the required ratio changes, regenerate or extend the art for the new ratio instead of cropping away the title composition, character focus, or natural text space. Cover title, subtitle, and author credit are precision typography: typeset them manually by default unless the human wants native image lettering. If native cover typography is used, generate a proof, then preserve any approved composition when making targeted text-placement changes. If the user asks to move only the subtitle or author line, do not redesign the whole cover.
+
+For back-cover art, generate a distinct portrait back cover whenever it is part of the agreed output. It should have its own small scene, pattern, object, or quiet aftermath image, plus a natural pale area for the blurb, source note, or credit. Do not skip it, leave a placeholder, or reuse/crop the front cover unless the human explicitly asks for a matched wraparound design.
 
 For character-introduction and world-introduction spreads, create a locked label sheet before image generation. These spreads may use native image text because their labels, arrows, badges, map marks, object names, and tiny explanations often need to be visually integrated into a complex diagram-like composition. Keep native text short and proofreadable: names, one-line role notes, labels, short rules, map marks, and brief callouts. Labels should be reader-helpful, not merely names: each main character needs a tiny "who they are" note, and fictional world objects or places need a brief function note unless the meaning is already obvious. Avoid long paragraphs as native image text. After generation, inspect every label and regenerate or manually correct anything misspelled, missing, or misleading before treating the spread as a continuity anchor.
 
@@ -261,7 +267,7 @@ When assembling the PDF, use `text_rendering_mode: native` for an anchor spread 
 
 Interior spread art should usually be a seamless flat landscape panorama with clean native white or pale negative space for text. The artwork may later be placed across two PDF pages, but the image itself should be one continuous canvas. Do not request, imply, or accept a visible center fold, crease, gutter, page seam, binding shadow, page curl, darkened middle, or open-book mockup unless the story explicitly needs a physical book image. Often the best layout is not a text object, but an airy part of the painting where the illustrated world gathers around the edges and action points. The text area may be one broad quiet zone or several smaller zones, but it must match the amount of final text. Avoid a repeated left-page rectangle unless the scene calls for it. Do not request parchment, old paper texture, a visible center fold, or long generated body text.
 
-For each spread, create a layout contract before image generation:
+For each story spread, create a layout contract before image generation. This contract must be based on the actual final or near-final text for that spread, not a generic assumption about "some text later":
 
 - text load and target word count
 - text zone coordinates, in spread-relative terms or manifest inches
@@ -269,11 +275,11 @@ For each spread, create a layout contract before image generation:
 - text-zone shape: rectangle, oval/cloud, tapered wedge, stepped shape, or two islands
 - text flow: centered title, left body, tapered body, stepped body, or split blocks
 - chapter-start layout, if any: chapter/title box, body box, fixed title-to-body gap, and internal padding from every visible or fuzzy edge of the quiet area
-- image prompt language telling the model where the calm area must be and where action/detail must stop
+- image prompt language telling the model where the calm area must be, how large it is relative to the text load, and where action/detail must stop
 - image prompt language telling the model the art is a seamless flat panoramic canvas, not an opened book, with no center crease/gutter/fold
 - proof criteria: text sits on pale low-detail space, follows the quiet shape, remains readable, and does not collide with figures, machinery, buildings, or color
 
-If the generated image does not contain the required natural text space, regenerate. Do not solve the problem by shrinking the manuscript into a caption, placing text over busy art, or accepting a beautiful image that cannot carry the story.
+If the generated image does not contain the required natural text space, regenerate. Do not solve the problem by shrinking the manuscript into a caption, placing text over busy art, adding a flat white card, or accepting a beautiful image that cannot carry the story.
 
 Read `references/story-standards.md` for the visual and layout standards.
 
@@ -281,7 +287,7 @@ Read `references/story-standards.md` for the visual and layout standards.
 
 Before the first production image, confirm the selected image model if the human has not already chosen one and more than one model/tool is available. Keep GPT Image 2.0 as the suggested tested path, but honor the human's choice.
 
-Generate the cover and spreads one at a time unless the user asks for a batch. After each image:
+Generate the cover, opening anchor spreads, main story spreads, and agreed back cover one at a time unless the user asks for a batch. After each image:
 
 - show the image or provide its path
 - ask for targeted feedback if needed
@@ -295,6 +301,8 @@ For anchor spreads that use native image text, perform a label audit before appr
 After every generated image, also perform a format and artifact audit:
 
 - cover is the intended single-page or jacket shape
+- back cover is generated when included in the output and is not a placeholder or recycled front cover
+- image shape was generated for the target aspect ratio, not fixed by destructive crop
 - interior artwork is a seamless flat canvas, not an open-book mockup
 - no unintended center crease, gutter, fold, binding shadow, or page seam appears
 - approved style reference is still visible in palette, line, lighting, and material language
@@ -325,9 +333,11 @@ When images and text are approved, assemble a proof PDF, then correct layout aga
 - after rendering, measure or visually mark the actual quiet-area bounds and the rendered text-group bounds. Equalize optical padding in the relevant axis before approval; for vertical Japanese text, this means balancing left/right space around the full right-to-left column group, not only the title column.
 - avoid busy art behind text
 - include front cover, story spreads, optional front/back matter, and optional back cover
+- if the back cover was requested or accepted, include its final generated image and blurb/text; do not silently omit it
 - check page order, title, author credit, chapter title placement, readability, character continuity, and world-rule continuity
 - on chapter-start spreads, check the chapter label, chapter title/heading, and body as a single group: they must share the same quiet area, align intentionally, keep enough vertical spacing, and never overlap. When correcting them, lower the title into the safe area and then lower the body to maintain the same gap; do not move body text upward over the title.
-- avoid introducing flat white readability panels during correction unless the human asks for that look. The existing illustrated negative space is usually intentional; protect it and fit the text within it.
+- avoid introducing flat white readability panels during correction. The existing illustrated negative space is usually intentional; protect it and fit the text within it. If the image lacks usable quiet space, regenerate rather than covering the art with a card unless the human explicitly asks for that graphic treatment.
+- for story body text, final manifests should not use opaque panel fields such as `background_fill`, `background_alpha`, `background_padding_in`, `background_radius_in`, or background outlines unless the human explicitly asks for a graphic card treatment. Remove those fields during final assembly and fit the text into world-native quiet areas instead.
 - when the human reports a layout problem, compare the rendered preview and the actual final PDF, then make the smallest targeted manifest change that addresses the named page or issue. Do not redesign nearby pages or repeatedly nudge unrelated layout variables.
 
 Use `scripts/new_manifest.py` to create a layout manifest and `scripts/assemble_picture_book_pdf.py` for proof and final raster PDFs:

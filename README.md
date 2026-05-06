@@ -60,6 +60,10 @@ Use the native image generation available in the current environment, keeping th
 
 If more than one image model or image-generation tool is available, ask the human which one they want before the first visual probe or production spread. Wonder Engine is model-agnostic, but its current prompt guidance, native-label policy, and layout-proof workflow have been tested on GPT Image 2.0, so GPT Image 2.0 is the recommended default unless the human chooses another model.
 
+Artwork should be generated in the format it needs to occupy: portrait cover, portrait back cover, wide hero, or seamless landscape interior. Cropping is only a tiny safe trim, not a way to turn the wrong composition into the right one. If the ratio is wrong, regenerate or extend the image.
+
+When a back cover is part of the book, it gets its own generated image and text area. It should not be skipped, left as a placeholder, or made by recycling the front cover unless the human specifically asks for a wraparound design.
+
 ## Text Is Not Image-Generated
 
 Wonder Engine does not ask the image model to render the final manuscript. The art is generated first with intentional quiet space, then the exact text is placed over the approved images as editable PDF typography.
@@ -88,7 +92,9 @@ The image model still creates artwork, not final manuscript text. For localized 
 
 Wonder Engine does not simply paste text over a white rectangle.
 
-It plans native quiet space inside the illustration: mist, sky, water, paper, wall, snow, empty table, map margin, or another calm area that belongs to the scene. Then it fits the text to that space.
+It plans native quiet space inside the illustration before image generation: mist, sky, water, paper, wall, snow, empty table, map margin, or another calm area that belongs to the scene. The spread text and artwork are designed together, so the quiet area matches the actual amount of prose.
+
+Flat white cards are not the fallback. If a story spread needs readable body text, the image should naturally provide the lighter area for it. If the generated art does not, the right fix is usually to regenerate, split the text into better islands, or revise the layout contract.
 
 The current PDF helper includes a negative-space fitting pass:
 
@@ -152,7 +158,9 @@ More illustration style presets are planned for the future. The goal is to suppo
 - native-text label policy for character/world anchor spreads, with locked label sheets and proofreading
 - optional back matter
 - optional back cover
+- target-ratio generation for cover, hero, spread, and back-cover art
 - one-spread-at-a-time image generation and approval
+- natural text-space planning before image generation, with no generic white-card rescue
 - show-don't-tell manuscript rules
 - story-density guidance so spreads become full scenes, not two-sentence captions
 - source-to-story metaphor mapping

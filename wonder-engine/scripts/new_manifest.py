@@ -138,7 +138,8 @@ def spread_page(number: int, image_dir: str) -> dict:
         "image": f"{image_dir}/spread-{number:02d}.png",
         "native_text_space": (
             "Generate or choose art with native blank/pale text space sized to "
-            "the final text; do not rely on a generic side panel."
+            "the final text before image generation; do not rely on a generic "
+            "side panel or a late white card over the art."
         ),
         "heading": f"Scene {number}",
         "text": "Replace with final manuscript text for this spread.",
@@ -260,8 +261,8 @@ def build_manifest(
                 "type": "back_cover",
                 "image": f"{image_dir}/back-cover.png",
                 "native_text_space": (
-                    "Use portrait back-cover art with a calm text area for a short "
-                    "book blurb, source note, or production credit."
+                    "Use a distinct portrait back-cover image with a calm native "
+                    "text area for a short book blurb, source note, or production credit."
                 ),
                 "text_blocks": [
                     {

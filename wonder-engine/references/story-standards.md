@@ -168,6 +168,7 @@ Characters:
 Composition:
 - [Cover portrait, jacket/wraparound, or seamless flat landscape panorama for interior spread art.]
 - [Native text-space plan matched to the final text length.]
+- Generate the artwork in the required final aspect ratio. Do not rely on later cropping to turn one format into another.
 - Text space should be a natural blank or pale part of the scene: open sky, fog, wall, paper-white, snow, doorway light, water reflection, smoke, cloud, calm watercolor wash, or an optional object-shaped area.
 - The illustrated world should end or open around the text space; do not wipe art away with a generic side gradient.
 - For interior panoramic art: one continuous flat canvas, not an opened book; no visible center fold, crease, gutter, vertical page split, binding shadow, page curl, hinge, or darkened middle.
@@ -203,6 +204,8 @@ Prefer the hybrid approach:
 - If the user wants native image text for body copy, warn that later edits, translation, exact typography, and consistency will be harder. Generate a proof spread first.
 - Never ask the image model to render a long manuscript block by default.
 
+The text and image layout are planned at the same time. For each story spread, write or approve the actual spread text before production image generation, estimate its load, then prompt the artwork around that load. Do not generate a pretty scene first and later search for somewhere to paste the story.
+
 ## Text-Space Design
 
 Plan text before prompting the image.
@@ -228,6 +231,7 @@ Good native text spaces:
 Bad text spaces:
 
 - a generic white rectangle unrelated to the scene
+- a late flat white card placed over the art because the image failed to leave quiet space
 - a full left-side wipe that erases a rich illustration
 - forcing every text area to be a sign, board, sail, or object when open watercolor space would feel more natural
 - parchment or aged paper texture unless requested
@@ -250,7 +254,7 @@ Create a layout contract for every spread before image generation. The contract 
 Include:
 
 - spread size and orientation
-- final or provisional text
+- final or near-final text; story images should not be generated before the text load is known
 - word count and text load
 - title/body composition plan, not just a body-text box
 - one or more text zones with coordinates
@@ -258,6 +262,7 @@ Include:
 - intended flow: centered heading, left body, tapered body, stepped body, split body, stacked chapter-start group, or speech bubble
 - art exclusion rule: what must not enter the zone, such as faces, high-contrast roofs, machinery, ropes, lamps, labels, or saturated color
 - prompt clause that tells the image model where to leave calm negative space
+- target aspect ratio and format; if the generated image has the wrong shape, regenerate or extend instead of cropping away composition, title space, or text space
 - proof rule: render a test page and reject it if the text crosses into busy color or ignores the shape
 
 Example zone:
@@ -286,6 +291,8 @@ Example zone:
 ```
 
 Treat the contract as a design constraint, not decoration. If the generated image violates it, revise the prompt and regenerate.
+
+Do not use cropping as a production fix for wrong-format title, cover, hero, spread, or back-cover art. A small safe trim is acceptable only when it preserves the approved composition and all planned text areas. Otherwise regenerate at the correct aspect ratio.
 
 The first coordinates in a manifest are a starting guess, not final layout. After image generation, the actual quiet area wins over the planned box.
 
@@ -322,6 +329,7 @@ For each page or spread:
 A page fails the layout gate if:
 
 - text crosses into busy color, faces, machinery, ropes, windows, labels, or high-contrast detail
+- the text is only readable because a flat white card was pasted over a scene that did not provide native quiet space
 - the first line or heading floats away from the natural quiet area
 - chapter label, chapter title/heading, and body are not aligned as one intentional group on chapter-start spreads
 - chapter title/heading overlaps the body, sits outside the usable text area, or leaves too little breathing room before the body starts
@@ -413,6 +421,7 @@ Show the variants together, ask which is best and worst, then record the approve
 - Use clean white or pale native text areas unless the user requests another treatment.
 - Every story spread needs a named natural negative-space plan before generation, sized for the actual prose. Good choices include pale sky, plaster wall, blank sail, awning underside, mist bank, water reflection, paper notice, doorway light, garden wall, smoke plume, or a large quiet map margin.
 - If the generated art does not include the planned calm text area, regenerate or revise the art. Do not place body text over busy art and do not cut real story substance merely because the art failed to leave room.
+- Do not paste a generic white card over finished art as a readability fix. Only use a card, label, sail, paper, wall, fog bank, or wash when it is part of the planned scene composition.
 - Keep line lengths comfortable.
 - Use readable storybook typography.
 - Keep generous margins.
@@ -430,6 +439,8 @@ Before final delivery:
 
 - Cover title and author credit are exact.
 - Back cover blurb, source note, or credit is included when requested.
+- Back cover art exists as its own approved generated image when a back cover is part of the output.
+- Cover, hero, spread, and back-cover images were generated or extended for their target ratios, not destructively cropped into shape.
 - All spreads are in order.
 - Chapter titles appear only where intended.
 - Text is readable at print size.
