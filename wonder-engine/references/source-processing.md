@@ -62,7 +62,7 @@ Build a table before outlining the book.
 | --- | --- | --- | --- | --- | --- | --- |
 | abstract rule | promise that must stay true | bell, sign, oath, map edge | character tests whether it still rings | someone ignores it under pressure | revise the promise and test again | early discovery or test spread |
 | feedback loop | thing that listens to its own echo | echo mill, tide wheel, rumor kettle | characters adjust it and watch it overreact | loop amplifies a tiny mistake | add delay, limit, or new signal | comic crisis spread |
-| uncertainty | fog around what is known | fog gauge, maybe-map, cloudy drawer | lead asks what is known and what is guessed | confident action from weak evidence | mark guesses and seek fresh facts | midpoint reversal |
+| uncertainty | fog around what is known | fog gauge, guess-map, cloudy drawer | lead asks what is known and what is guessed | confident action from weak evidence | mark guesses and seek fresh facts | midpoint reversal |
 | optimization | hungry shortcut habit | measuring cart, race route, market game | foil makes everyone chase one number | it improves the number while harming the town | add constraints and human goals | big absurd crisis |
 | emergence | pattern made by many small actions | flock map, market tiles, river lights | characters cannot command one piece to fix the whole | local fixes make global trouble | change incentives or rules of interaction | chapter turn |
 
@@ -70,7 +70,7 @@ Add source-specific rows. Avoid carrying old project-specific characters, machin
 
 This table is internal scaffolding. Its source concepts, terms, and direct metaphors should not automatically become titles, character names, chapter names, world names, or repeated reader-facing labels.
 
-Do not make the mapping table a machine factory. Machines are allowed when the source truly wants mechanical cause-and-effect, but many concepts are better embodied as craft, weather, animal behavior, food, music, maps, games, rituals, plants, shadows, schoolroom habits, markets, or ordinary social rules. Force variety by asking, "Could this be understood without gears, pipes, brass, levers, or an engine?"
+Do not turn every mapping table into a mechanical room. Machines are allowed when the source truly wants mechanical cause-and-effect, but many concepts are better embodied as craft, weather, animal behavior, food, music, maps, games, rituals, plants, shadows, schoolroom habits, markets, or ordinary social rules. Force variety by asking, "Could this be understood without gears, pipes, metalwork, levers, or an engine?"
 
 ## Metaphor Rules
 
@@ -81,8 +81,8 @@ Do not make the mapping table a machine factory. Machines are allowed when the s
 - Keep names concrete and readable.
 - Choose the metaphor category deliberately. A "story engine" means the main dramatic mechanism, not necessarily a literal machine.
 - Use technical terms in the main story only when the user wants them or when a scene truly earns a tiny label or joke. Prefer to reserve real terminology for optional back matter.
-- Do not leak source jargon into titles, subtitles, cast names, world names, or major objects unless the user explicitly asks for that. Avoid title words like "agent," "audit," "harness," "permission," "formal," "runtime," "policy," "dark factory," or other source-specific terms when those terms belong to the source rather than the story world.
-- Avoid one-to-one literalization when the source term is already metaphorical. If the source says "dark factory," do not default to a literal factory. Transform the function into a fresher story engine.
+- Do not leak source jargon into titles, subtitles, cast names, world names, or major objects unless the user explicitly asks for that. For any domain, treat specialized vocabulary from the source as private scaffolding until a scene earns a small readable label or the optional back matter needs the real term.
+- Avoid one-to-one literalization when the source already uses a metaphor. Do not automatically turn the source's metaphor into the story's literal object; transform its function into a fresh story-world mechanism.
 - Reader-facing names should feel like they belong to the adventure first. The source idea should be discoverable through events, not exposed as vocabulary.
 
 ## Reader-Facing Language
@@ -111,7 +111,7 @@ Title options should be imaginative title packages, not flat labels. For each op
 Transform the source into a dramatic thesis:
 
 - Bad: "This book explains a topic."
-- Better: "A town learns that a helpful system needs a visible way to fail safely."
+- Better: "A village learns that a shortcut is only kind when everyone can see what it changed."
 - Better: "Two friends discover that measuring one thing can change everything else."
 - Better: "A mapmaker proves that a map is not the territory when the territory starts moving."
 

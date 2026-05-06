@@ -47,7 +47,7 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Keep visual no-go rules at the right scope. Universal skill rules should cover density, hierarchy, readability, and purposeful detail. Topic-specific avoidances, such as "too much machinery" for a particular book, belong in that project's continuity bible, visual reference stack, and prompt capsule rather than as permanent skill law.
 - Do not overcorrect density feedback by flattening the art, aging/redesigning characters, or restaging the scene. When revising for less detail, preserve the approved cast, age, relationships, palette, scene event, and composition family; remove only filler machinery, crinkly microtexture, and unreadable background noise.
 - If the human is unsure how much texture is right, run a small texture ladder on one scene before production. Generate controlled variants from richer to cleaner, ask for the best and worst, then record approved and rejected texture references in the continuity bible.
-- Vary locations, compositions, and local color across the book while staying inside the approved world palette. Do not let every spread become the same machine backdrop, harbor backdrop, laboratory backdrop, or any other repeated visual habit. Build a spread-by-spread variety plan: market, kitchen, office, map, under-quay room, storm bowl, garden/greenery, canal, roof, dock, interior, night exterior, council room, and other story-specific spaces as appropriate.
+- Vary locations, compositions, and local color across the book while staying inside the approved world palette. Do not let every spread become the same machine backdrop, waterfront backdrop, laboratory backdrop, forest backdrop, classroom backdrop, or any other repeated visual habit. Build a spread-by-spread variety plan from the chosen world: home/workplace, public gathering place, route or threshold, map or diagram view, natural environment, quiet interior, active exterior, test space, crisis space, aftermath space, and other story-specific locations as appropriate.
 - Treat natural negative space as a hard production requirement, not a hopeful prompt detail. Every story spread prompt must name a specific quiet area sized for the final text load: pale sky, plaster wall, blank sail, awning underside, mist, water reflection, paper notice, doorway light, sand, snow, smoke, garden wall, or another world-native calm surface.
 - Use a hybrid text policy: allow native image text for short signs, labels, maps, tiny jokes, and designed front-matter label pages; typeset final story body text separately by default.
 - Design text and image space together before image generation. The final or near-final text, word count, and text-load category must be known before prompting each story image. The prompt should tell the image model where the natural light/quiet areas belong and how large they need to be for that specific prose.
@@ -133,7 +133,7 @@ Produce a concept pitch before writing the full manuscript:
 - proposed world
 - proposed cast ecology with roles, wants, speech patterns, relationships, and props
 - proposed chapter count and story arc
-- assumptions about culture, language, typography, trim size, and PDF output
+- assumptions about culture, language, trim size, and PDF output; defer typography unless language/script or visual production already makes it relevant
 
 Titles should feel specific to this book, not interchangeable with a generic adventure. The main title may be poetic, strange, place-based, object-based, or character-based. The subtitle/tagline should add mischief, promise, stakes, or comic specificity without explaining the source concept too literally.
 
@@ -202,7 +202,7 @@ The continuity bible is internal production scaffolding. It should include:
 - detail-density rules: what kinds of detail are meaningful, what kinds of texture or micro-detail to avoid, and how much negative space the style needs
 - detail island plan: the two or three detail clusters for each spread and the calm fields that must remain broad, quiet, and low-mark
 - spread variety plan: a quick map of each spread's dominant location, lighting, local accent color, natural textures, foreground action, machine/tool/craft/nature balance, crowd amount, and text-space surface so the book does not become visually repetitive
-- continuity risks, such as easy-to-confuse characters, similar props, repeated visual systems, overused machinery, or rules the image model may literalize incorrectly
+- continuity risks, such as easy-to-confuse characters, similar props, repeated visual systems, topic-specific visual habits, or rules the image model may literalize incorrectly
 
 The opening character-introduction spread and world-introduction spread should be built from this bible. They serve the reader, but they also become visual anchors for the rest of the book. Generate and approve them before the main story images whenever possible.
 

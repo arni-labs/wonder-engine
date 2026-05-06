@@ -110,7 +110,7 @@ Offer title options as title packages:
 - subtitle or tagline
 - one short reason it fits
 
-Titles should be distinctive, quirky, and specific to the world. Prefer odd nouns, place names, character names, objects, incidents, civic rituals, weather, impossible jobs, or visible machinery over generic abstractions. The subtitle/tagline can be longer, funnier, and more storybook-like than the main title.
+Titles should be distinctive, quirky, and specific to the world. Prefer odd nouns, place names, character names, objects, incidents, civic rituals, weather, impossible jobs, or visible systems over generic abstractions. The subtitle/tagline can be longer, funnier, and more storybook-like than the main title.
 
 Avoid:
 
@@ -205,7 +205,7 @@ Before production image generation, make a spread-by-spread visual variety board
 - main shape/composition
 - named natural text-space surface
 
-The book should feel like one world, not one repeated backdrop. Reuse palette anchors and character design, but vary the reader's visual experience: market, kitchen, quay, garden, dock, council room, under-quay chamber, map, storm bowl, roofline, canal, workshop, monsoon exterior, quiet aftermath, or other story-specific settings. Machinery should appear when it matters to the scene's action or world logic; it should not fill every background by default. Science can be visible through listening, counting, testing, tending, cooking, comparing, folding, mapping, sorting, or watching living systems change.
+The book should feel like one world, not one repeated backdrop. Reuse palette anchors and character design, but vary the reader's visual experience through story-specific settings: home/workplace, public gathering place, route or threshold, map or diagram view, natural environment, quiet interior, active exterior, test space, crisis space, aftermath space, or another location that belongs to the chosen world. Machinery should appear when it matters to the scene's action or world logic; it should not fill every background by default. Science can be visible through listening, counting, testing, tending, cooking, comparing, folding, mapping, sorting, or watching living systems change.
 
 ## Illustration Prompt Rules
 
@@ -451,14 +451,14 @@ Choose typography as part of the book design, not as an afterthought.
 ## Visual Density Rules
 
 - Foreground characters can be detailed and expressive.
-- Midground machines and actions should be clear.
+- Midground systems, tools, creatures, and actions should be clear.
 - Background architecture and crowds should be simplified.
 - Avoid many tiny detailed human faces.
 - Avoid overstuffing the image with motifs that do not affect the scene.
 - Prefer one memorable visual system per spread: a machine, garden, map, kitchen, weather pattern, game, route, animal behavior, craft process, or other story-specific system.
 - Detail must be structural and readable, not decorative noise. Prefer larger meaningful marks: gears that matter, ropes that guide action, tile bands, labels, tools, faces, shells, doors, and map routes.
 - Avoid random scratch texture, speckled surfaces for no reason, lace-like tiny pipes, illegible micro-crowds, and repeated small marks that collapse into static at print size.
-- Texture should explain material: stone edges, worn brass, fabric folds, painted tile, wood grain, water sparkle, smoke, or paper fiber when relevant.
+- Texture should explain material: stone edges, worn metal, fabric folds, painted tile, wood grain, water sparkle, smoke, or paper fiber when relevant.
 - Use a detail budget. Pick the few things the reader should notice on this spread and make those rich; simplify the rest into clean, calm shapes.
 - Do not use machinery as filler. A machine detail should reveal a rule, cause a problem, solve a problem, frame text space, or show where the characters are. When the idea can live more naturally as paper, water, sound, food, weather, plants, bodies, maps, or social behavior, use that instead.
 - Use the detail-island rule: choose two or three visual clusters that can be richly drawn, then keep the remaining fields broad and quiet. A dense world does not require dense marks everywhere.

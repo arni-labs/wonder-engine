@@ -53,7 +53,7 @@ Each recurring character needs a stable anchor:
 Keep snippets short enough to paste into every relevant image prompt. Example shape:
 
 ```text
-Amina Kadal: twelve-year-old harbor tinkerer, compact silhouette, warm brown skin, black braid tied with blue cord, saffron work tunic over rolled trousers, brass measuring bracelet, always carries a shell-handled screwdriver; alert, practical, impatient with vague answers.
+Lead character: age or scale if relevant, clear visual category, readable silhouette, two or three stable colors/materials, one recurring prop, one gesture or expression habit; temperament, want, and one do-not-change detail.
 ```
 
 ## World Anchors
@@ -76,7 +76,7 @@ Track:
 - do-not-change details
 - reusable prompt snippet
 
-World rules should be specific enough to prevent contradictions. Bad: "The harbor has machines." Better: "Machines must receive stamped brass plates before touching public docks; unapproved machines can hum, calculate, and complain, but cannot move cranes, gates, bridges, or boats." For non-machine worlds, make equally concrete rules: "The garden paths change only after rain," "Recipes can remember who stirred them," or "Paper bridges bend before they break, and everyone must listen to the bend."
+World rules should be specific enough to prevent contradictions. Bad: "The world has rules." Better: "In this mountain town, wind paths change only after the noon bells, and no one can cross a new path until someone has marked both ends." For other worlds, make the rule equally concrete: "The garden paths change only after rain," "Recipes can remember who stirred them," or "Paper bridges bend before they break, and everyone must listen to the bend."
 
 ## Opening Anchor Spreads
 
@@ -130,7 +130,7 @@ Use native image text mainly for short, visually integrated pieces:
 - badges, signs, route names, and tiny rules
 - short diagram callouts
 
-Use reader-helpful label text. For characters, include a compact role, want, job, or story function, not only the name. For fictional machines, places, creatures, tools, rituals, recipes, plants, games, or weather signs, include a short function note unless the picture and name make it obvious. Good shape: "No-Bell / means not yet, not failure" or "Paper Tide / rises when promises are too vague."
+Use reader-helpful label text. For characters, include a compact role, want, job, or story function, not only the name. For fictional machines, places, creatures, tools, rituals, recipes, plants, games, or weather signs, include a short function note unless the picture and name make it obvious. Good shape: "Seed Clock / marks when roots are ready" or "Echo Gate / opens after three clear sounds."
 
 Avoid native text for long explanations, dense back matter, precise source definitions, cover title/credit, and story body copy.
 
@@ -170,7 +170,7 @@ Before approving a generated image, check:
 - Did it replace meaningful detail with random texture, speckle, tangled micro-lines, or illegible tiny crowds?
 - Did it create an all-over rain/grid/hatch/stipple/crinkled-paper pattern across unrelated surfaces?
 - Are there broad calm fields, or is the entire image equally busy?
-- Does it overuse the same background machinery, palette balance, location, or composition as nearby spreads?
+- Does it overuse the same background system, topic-specific visual habit, palette balance, location, or composition as nearby spreads?
 - Does it provide the planned natural text-space surface in a calm, low-detail area large enough for the spread's prose?
 
 If an image contains a happy accident, decide explicitly:
