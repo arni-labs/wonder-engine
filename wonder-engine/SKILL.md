@@ -14,6 +14,7 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 ## Core Rules
 
 - Make the final deliverable a PDF unless the user asks for manuscript, prompts, or images only.
+- Treat "full illustrated PDF" as a completion contract: every included page must have approved generated or supplied artwork, final text, and corrected layout. Starter manifest text, placeholder/mock-up pages, blank slide-like pages, missing images, and draft boxes are not acceptable final output.
 - Interview naturally and editorially. The interview is a creative extraction process: draw out the human's source material, taste, odd associations, memories, ambitions, anxieties, and original metaphors. Use options, provocations, and suggestions as sparks when they help the human think, but do not open with an ABC checklist unless the user explicitly asks for shorthand.
 - Preserve the human's imagination as the center of gravity. Suggest possibilities to unlock taste and invention, then ask what attracts, irritates, or surprises them. Do not replace missing answers with the agent's favorite defaults.
 - Make book titles unique, imaginative, and slightly odd. Present each title as a package with a main title and a subtitle/tagline. Avoid short generic titles unless the user asks for simplicity.
@@ -61,6 +62,7 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - Fit the whole text composition, not only the body paragraph. Chapter label, scene heading, body, speech bubbles, and image quiet space should feel deliberately placed together.
 - On chapter-start spreads, treat the chapter label, chapter title, and body copy as one vertical layout group. Move the chapter title down into the safe quiet area first, then place the body at a fixed comfortable distance below it. Do not fix overlap by lifting body text upward, letting titles sit on the edge of the text area, or shrinking type until it becomes fragile.
 - Preserve the illustrated negative space. For story body text, do not rescue a failed layout by smashing a flat white card or rectangle over the art. A paper, wall, sail, fog bank, label, or wash can hold text only when it was planned as a native part of the scene. If readability needs help, first increase internal padding, adjust line shape, lower the title/body group, split text, or regenerate the art.
+- The PDF helper may warn about or ignore card-like fields such as `background_fill`, `text_panel`, and `render_panel`. Do not enable text-background or panel override flags unless the human explicitly asks for a graphic card/panel treatment.
 - Treat the first assembled PDF as a layout proof, not the final book. Do a page-by-page correction pass against the actual generated images before calling a PDF finished.
 - Back matter and explanatory pages must be finished illustrated pages too. They may use world-native ledgers, cloth, diagrams, maps, or notes, but do not leave them as abstract mock-up cards over faded art.
 - For cover/title images, do not solve a ratio mismatch with blurred side-fill, dark filler strips, or background padding. Regenerate or outpaint coherent illustrated side continuation so the title composition fits the final cover ratio.
@@ -375,6 +377,7 @@ When images and text are approved, assemble a proof PDF, then correct layout aga
 - use the chosen font pairing; if the requested language or glyph set is not covered, choose a supported alternative and note it
 - respect the language's chosen writing direction and book convention. For Japanese book-style layouts, use vertical columns flowing right-to-left when that is the intended form; do not default to horizontal left-to-right merely because the layout tool does.
 - do not rely on starter manifest boxes as final placement
+- remove every starter placeholder from the manifest; strings such as "Replace with," "Working Title," generic scene headings, or label-sheet examples mean the book is still a draft
 - inspect the real usable pale/low-detail area on each generated image
 - update each page's text zones, split text islands, or regenerate art when the quiet space does not match the text
 - shape text blocks to the actual quiet area rather than defaulting to a rectangle when the whitespace is curved, tapered, or broken by illustration
@@ -398,9 +401,12 @@ Use `scripts/new_manifest.py` to create a layout manifest and `scripts/assemble_
 python3 scripts/new_manifest.py --title "Working Title" --subtitle "A Quirky Tagline" --author "by Name" --spreads 20 --back-cover --output build/book-manifest.json
 python3 scripts/fit_text_to_negative_space.py build/book-manifest.json --output build/book-manifest-fitted.json
 python3 scripts/assemble_picture_book_pdf.py build/book-manifest-fitted.json --output build/book-layout-proof.pdf --preview-dir build/previews
+python3 scripts/assemble_picture_book_pdf.py build/book-manifest-fitted.json --strict-final --output build/book-final.pdf --preview-dir build/final-previews
 ```
 
 The assembly script is a practical helper, not a substitute for visual judgment. Inspect the rendered preview PNGs and PDF page by page. Revise text boxes, line shapes, font sizes, text islands, or images until it reads cleanly. Only then export or name the final PDF.
+
+Use `--strict-final` for the final PDF pass. If it fails because of placeholder text, missing images, unverified body-text placement, generic fallback layout, card backgrounds, or rendered panels, fix the actual images/manifest/layout. Do not remove the flag merely to get a PDF file.
 
 Use `text_blocks[].fit_to_negative_space` when the body block should be measured against the generated image. The helper will write `text_blocks[].line_shape` with gentle line-by-line offsets and widths. If the image does not honor the layout contract, regenerate or revise the art rather than forcing text over busy detail.
 

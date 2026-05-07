@@ -308,7 +308,7 @@ When building the illustration blueprint, include:
 - number of text islands
 - each text island's role, rough size, and scene object
 - text flow: straight rectangle, centered title, tapered body, stepped body, curved margin, or two-island flow
-- whether the assembler should add no panel, a subtle local mist/wash, or a deliberate white object behind text
+- whether the artwork itself should contain open space, a subtle world-native mist/wash, or a deliberate object behind text. The assembler should not create a late card or panel for story body text.
 
 ## Layout Contract
 
@@ -403,6 +403,8 @@ A page fails the layout gate if:
 
 A PDF is production-ready only after every page passes this gate.
 
+Starter manifests are not books. A final PDF must contain approved artwork for every included page and no starter text such as "Replace with," "Working Title," generic label examples, or placeholder scene headings. If an agent cannot generate the remaining images in the current run, it should stop at a clearly named proof/manuscript/prompt package instead of presenting a mock-up PDF as finished.
+
 ## Shape-Aware Typesetting
 
 Fit text to the quiet area the image actually provides. Do not treat every text area as a perfect rectangle.
@@ -485,6 +487,7 @@ Show the variants together, ask which is best and worst, then record the approve
 - Every story spread needs a named natural negative-space plan before generation, sized for the actual prose. Good choices include pale sky, plaster wall, blank sail, awning underside, mist bank, water reflection, paper notice, doorway light, garden wall, smoke plume, or a large quiet map margin.
 - If the generated art does not include the planned calm text area, regenerate or revise the art. Do not place body text over busy art and do not cut real story substance merely because the art failed to leave room.
 - Do not paste a generic white card over finished art as a readability fix. Only use a card, label, sail, paper, wall, fog bank, or wash when it is part of the planned scene composition.
+- Do not use `background_fill`, `text_panel`, `render_panel`, or similar manifest fields as a layout rescue unless the human explicitly requested a card/panel design. The default final assembly should fit text into native quiet space.
 - Keep line lengths comfortable.
 - Use readable storybook typography.
 - Keep generous margins.
@@ -503,6 +506,7 @@ Before final delivery:
 - Cover title and author credit are exact.
 - Back cover blurb, source note, or credit is included when requested.
 - Back cover art exists as its own approved generated image when a back cover is part of the output.
+- The final PDF was assembled with strict validation, or the same checks were performed manually: no missing images, starter text, generic fallback layouts, unverified body text placement, or card/panel rescues.
 - Cover, hero, spread, and back-cover images were generated or extended for their target ratios, not destructively cropped into shape.
 - All spreads are in order.
 - Chapter titles appear only where intended.
