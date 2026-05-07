@@ -160,6 +160,24 @@ def spread_page(number: int, image_dir: str) -> dict:
                 "size_pt": 17,
                 "min_size_pt": 11,
                 "color": "ink",
+                "text_surface": {
+                    "description": (
+                        "Replace with the native quiet surface generated inside the art, "
+                        "such as pale sky, mist, wall, snow, water reflection, or a "
+                        "world-native object."
+                    ),
+                    "surface_bounds": [0.55, 0.85, 6.4, 7.4],
+                    "edge_behavior": (
+                        "Replace with how the illustration naturally stops, dissolves, "
+                        "or gathers around this quiet surface without a hard panel edge."
+                    ),
+                    "art_exclusion": (
+                        "Replace with what must stay out of the text area: faces, hands, "
+                        "ropes, labels, saturated color, high-detail texture, and focal action."
+                    ),
+                    "padding_in": 0.18,
+                    "verified": False,
+                },
                 "fit_to_negative_space": {
                     "min_width_in": 2.7,
                     "max_width_in": 5.8,
@@ -243,6 +261,20 @@ def build_manifest(
                         "size_pt": 16,
                         "min_size_pt": 11,
                         "color": "ink",
+                        "text_surface": {
+                            "description": (
+                                "Replace with the native quiet surface generated inside the art."
+                            ),
+                            "surface_bounds": [0.55, 1.65, 7.1, 8.6],
+                            "edge_behavior": (
+                                "Replace with how diagrams, objects, or atmosphere frame the text."
+                            ),
+                            "art_exclusion": (
+                                "Replace with what must stay out of the text area."
+                            ),
+                            "padding_in": 0.18,
+                            "verified": False,
+                        },
                         "fit_to_negative_space": {
                             "min_width_in": 2.7,
                             "max_width_in": 5.8,
@@ -282,6 +314,20 @@ def build_manifest(
                         "size_pt": 15,
                         "min_size_pt": 10,
                         "color": "ink",
+                        "text_surface": {
+                            "description": (
+                                "Replace with the native quiet surface generated inside the back-cover art."
+                            ),
+                            "surface_bounds": [0.8, 1.95, 6.9, 5.95],
+                            "edge_behavior": (
+                                "Replace with how the back-cover illustration leaves this calm area."
+                            ),
+                            "art_exclusion": (
+                                "Replace with what must stay out of the blurb area."
+                            ),
+                            "padding_in": 0.18,
+                            "verified": False,
+                        },
                         "fit_to_negative_space": {
                             "min_width_in": 2.7,
                             "max_width_in": 5.6,

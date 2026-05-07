@@ -50,6 +50,7 @@ Do not imitate or name any existing book, character, author, illustrator, or exa
 - If the human is unsure how much texture is right, run a small texture ladder on one scene before production. Generate controlled variants from richer to cleaner, ask for the best and worst, then record approved and rejected texture references in the continuity bible.
 - Vary locations, compositions, and local color across the book while staying inside the approved world palette. Do not let every spread become the same machine backdrop, waterfront backdrop, laboratory backdrop, forest backdrop, classroom backdrop, or any other repeated visual habit. Build a spread-by-spread variety plan from the chosen world: home/workplace, public gathering place, route or threshold, map or diagram view, natural environment, quiet interior, active exterior, test space, crisis space, aftermath space, and other story-specific locations as appropriate.
 - Treat natural negative space as a hard production requirement, not a hopeful prompt detail. Every story spread prompt must name a specific quiet area sized for the final text load: pale sky, plaster wall, blank sail, awning underside, mist, water reflection, paper notice, doorway light, sand, snow, smoke, garden wall, or another world-native calm surface.
+- Treat the text surface as part of the illustration brief. A spread is not full art plus text pasted afterward; it is a page composition where the story world intentionally leaves a calm native surface for typography. The illustration may trail into white, stop at a hill edge, dissolve into mist, leave open sky, wrap around a wall, or gather detail around the text. It must not rely on a hard side wipe, card, or late overlay.
 - Use a hybrid text policy: allow native image text for short signs, labels, maps, tiny jokes, and designed front-matter label pages; typeset final story body text separately by default.
 - Design text and image space together before image generation. The final or near-final text, word count, and text-load category must be known before prompting each story image. The prompt should tell the image model where the natural light/quiet areas belong and how large they need to be for that specific prose.
 - The blank or pale areas must be part of the illustrated composition, sized to the actual text, not a generic white side panel pasted over art.
@@ -286,6 +287,7 @@ For every cover, spread, and back cover, create:
 - text rendering mode: manual, native, or mixed
 - text area placement and approximate word count
 - native negative-space plan, such as open sky, mist, water, snow, pale wall, paper-white, calm watercolor wash, or an optional object-shaped area
+- `text_surface` contract for each story body block: description, surface bounds, edge behavior, art exclusions, inner padding, and a `verified` flag that remains false until the generated image and proof are inspected
 - text-flow plan: rectangular, centered, tapered, stepped, two-island, stacked chapter-start group, or another gentle shape-aware layout
 - typography plan: font mood, body/heading pairing, language coverage, and any user-supplied font files
 - speech bubble text, if any
@@ -312,6 +314,10 @@ For each story spread, create a layout contract before image generation. This co
 - text load and target word count
 - text zone coordinates, in spread-relative terms or manifest inches
 - native surface bounds, which must be larger than the final text zone
+- `text_surface.description`: the world-native quiet surface, such as pale sky, mist, wall, water reflection, snowfield, blank fabric, paper margin, or another calm surface that belongs to this scene
+- `text_surface.edge_behavior`: how the illustration naturally stops, opens, dissolves, or gathers around the quiet area without a hard wipe or panel edge
+- `text_surface.art_exclusion`: what must stay out of the text zone and its padding, such as faces, hands, labels, ropes, saturated color, dense texture, or focal action
+- `text_surface.verified`: false while planning; set true only after inspecting the generated image without text and the assembled proof with text
 - inner padding target, with text inset from the native surface edge rather than touching it
 - named natural text-space surface, such as pale sky, plaster wall, blank sail, awning underside, mist bank, calm water reflection, blank signboard, or doorway light
 - text-zone shape: rectangle, oval/cloud, tapered wedge, stepped shape, or two islands
@@ -328,6 +334,7 @@ Run a native text-zone acceptance pass before typesetting:
 3. Confirm the surface exists as an object, material, atmospheric field, or naturally calm area in the scene, not as a soft blob or blank overlay.
 4. Confirm characters, important props, signage, action, and dense machinery do not enter the typeset bounds or the padding zone.
 5. Confirm the text zone could remain understandable if no extra fade were added.
+6. Update the manifest's `text_surface` fields to describe the actual surface and set `verified: true` only when the proof text sits cleanly inside it.
 
 If the generated image does not contain the required natural text space, regenerate or edit the image. Do not solve the problem by shrinking the manuscript into a caption, placing text over busy art, adding a flat white card, painting a loose blob behind the text, or accepting a beautiful image that cannot carry the story.
 
@@ -382,6 +389,7 @@ When images and text are approved, assemble a proof PDF, then correct layout aga
 - update each page's text zones, split text islands, or regenerate art when the quiet space does not match the text
 - shape text blocks to the actual quiet area rather than defaulting to a rectangle when the whitespace is curved, tapered, or broken by illustration
 - when available, run the negative-space fitting helper before final assembly so `line_shape` rows are derived from the actual art, then inspect the proof visually
+- keep every story body block tied to a verified `text_surface`; strict final assembly should fail if the block has only a coordinate box or planned `fit_to_negative_space` values
 - preserve safe margins and internal padding; a text box should sit inside the calm area, not touch the visible or soft-fade boundary of that area
 - enforce native-surface padding after rendering. The final text block should normally occupy no more than about 75 percent of the native surface width and no more than about 80 percent of its height, unless the surface is an intentionally shaped column or banner with equivalent optical padding.
 - after rendering, measure or visually mark the actual quiet-area bounds and the rendered text-group bounds. Equalize optical padding in the relevant axis before approval; for vertical Japanese text, this means balancing left/right space around the full right-to-left column group, not only the title column.
@@ -406,7 +414,7 @@ python3 scripts/assemble_picture_book_pdf.py build/book-manifest-fitted.json --s
 
 The assembly script is a practical helper, not a substitute for visual judgment. Inspect the rendered preview PNGs and PDF page by page. Revise text boxes, line shapes, font sizes, text islands, or images until it reads cleanly. Only then export or name the final PDF.
 
-Use `--strict-final` for the final PDF pass. If it fails because of placeholder text, missing images, unverified body-text placement, generic fallback layout, card backgrounds, or rendered panels, fix the actual images/manifest/layout. Do not remove the flag merely to get a PDF file.
+Use `--strict-final` for the final PDF pass. If it fails because of placeholder text, missing images, missing or unverified `text_surface` contracts, generic fallback layout, card backgrounds, rendered panels, or body text without final `line_shape`, `negative_space_fit`, or `shape_verified`, fix the actual images/manifest/layout. Do not remove the flag merely to get a PDF file.
 
 Use `text_blocks[].fit_to_negative_space` when the body block should be measured against the generated image. The helper will write `text_blocks[].line_shape` with gentle line-by-line offsets and widths. If the image does not honor the layout contract, regenerate or revise the art rather than forcing text over busy detail.
 

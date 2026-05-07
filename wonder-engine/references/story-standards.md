@@ -283,6 +283,8 @@ For each spread, estimate text load:
 
 Match text area to text load. Avoid leaving a full blank half-spread for tiny text, and avoid squeezing rich or heavy text into a decorative corner. Do not force the manuscript into caption length just to avoid layout work.
 
+Think of the text surface as illustrated architecture. The artist can leave part of the canvas nearly white, let the world fade out, or make the action gather around a calm opening. That calm opening must feel native to the scene: sky, mist, wall, paper margin, snow, water light, cloth, doorway glow, or another believable surface. It should not feel like a rectangle erased from the art.
+
 Good native text spaces:
 
 - broad paper-white or pale watercolor areas where the world, characters, action, and useful detail gather around the edges
@@ -309,6 +311,7 @@ When building the illustration blueprint, include:
 - each text island's role, rough size, and scene object
 - text flow: straight rectangle, centered title, tapered body, stepped body, curved margin, or two-island flow
 - whether the artwork itself should contain open space, a subtle world-native mist/wash, or a deliberate object behind text. The assembler should not create a late card or panel for story body text.
+- text_surface contract: description, surface_bounds, edge_behavior, art_exclusion, padding_in, and verified=false until the generated image and proof have been inspected
 
 ## Layout Contract
 
@@ -321,6 +324,11 @@ Include:
 - word count and text load
 - title/body composition plan, not just a body-text box
 - one or more text zones with coordinates
+- `text_surface.description`: what native quiet surface will carry the text
+- `text_surface.surface_bounds`: the larger quiet surface in spread inches, not the smaller text box
+- `text_surface.edge_behavior`: how the drawing naturally opens, stops, fades, or gathers around the surface
+- `text_surface.art_exclusion`: what must not enter the surface or padding zone
+- `text_surface.verified`: false during planning, true only after inspecting both the generated art without text and the proof with text
 - zone shape: rectangle, oval/cloud, tapered wedge, stepped shape, or two islands
 - intended flow: centered heading, left body, tapered body, stepped body, split body, stacked chapter-start group, or speech bubble
 - art exclusion rule: what must not enter the zone, such as faces, high-contrast roofs, machinery, ropes, lamps, labels, or saturated color
@@ -336,6 +344,14 @@ Example zone:
   "text_load": "standard",
   "zone": "upper-left watercolor mist opening",
   "box": [0.8, 2.4, 5.2, 5.8],
+  "text_surface": {
+    "description": "broad pale mist opening between rooflines, part of the painted sky",
+    "surface_bounds": [0.45, 1.9, 6.1, 6.6],
+    "edge_behavior": "rooftops and smoke trails stop around the mist; watercolor detail dissolves before the text area",
+    "art_exclusion": "no faces, ropes, signs, saturated roofs, high-contrast marks, or focal action inside the surface",
+    "padding_in": 0.18,
+    "verified": false
+  },
   "flow": "tapered body",
   "fit_to_negative_space": {
     "min_width_in": 2.7,
@@ -354,6 +370,8 @@ Example zone:
 ```
 
 Treat the contract as a design constraint, not decoration. If the generated image violates it, revise the prompt and regenerate.
+
+Do not set `text_surface.verified` during planning. It means the agent has inspected the actual generated image without text, confirmed the native quiet surface exists, assembled a proof, and confirmed the final text sits inside that surface with visual padding.
 
 Do not use cropping as a production fix for wrong-format title, cover, hero, spread, or back-cover art. A small safe trim is acceptable only when it preserves the approved composition and all planned text areas. Otherwise regenerate at the correct aspect ratio.
 
@@ -392,6 +410,7 @@ For each page or spread:
 A page fails the layout gate if:
 
 - text crosses into busy color, faces, machinery, ropes, windows, labels, or high-contrast detail
+- the body text has no verified text_surface contract tying it to a real native quiet area in the generated image
 - the text is only readable because a flat white card was pasted over a scene that did not provide native quiet space
 - the first line or heading floats away from the natural quiet area
 - chapter label, chapter title/heading, and body are not aligned as one intentional group on chapter-start spreads
@@ -485,6 +504,7 @@ Show the variants together, ask which is best and worst, then record the approve
 - Typeset final body text outside the image model by default.
 - Use clean white or pale native text areas unless the user requests another treatment.
 - Every story spread needs a named natural negative-space plan before generation, sized for the actual prose. Good choices include pale sky, plaster wall, blank sail, awning underside, mist bank, water reflection, paper notice, doorway light, garden wall, smoke plume, or a large quiet map margin.
+- Every final story body block needs a verified `text_surface` in the manifest. The surface bounds must be larger than the text box, explain how the art opens around it, and list what the art kept out of it.
 - If the generated art does not include the planned calm text area, regenerate or revise the art. Do not place body text over busy art and do not cut real story substance merely because the art failed to leave room.
 - Do not paste a generic white card over finished art as a readability fix. Only use a card, label, sail, paper, wall, fog bank, or wash when it is part of the planned scene composition.
 - Do not use `background_fill`, `text_panel`, `render_panel`, or similar manifest fields as a layout rescue unless the human explicitly requested a card/panel design. The default final assembly should fit text into native quiet space.
@@ -506,7 +526,7 @@ Before final delivery:
 - Cover title and author credit are exact.
 - Back cover blurb, source note, or credit is included when requested.
 - Back cover art exists as its own approved generated image when a back cover is part of the output.
-- The final PDF was assembled with strict validation, or the same checks were performed manually: no missing images, starter text, generic fallback layouts, unverified body text placement, or card/panel rescues.
+- The final PDF was assembled with strict validation, or the same checks were performed manually: no missing images, starter text, generic fallback layouts, missing or unverified text_surface contracts, unverified body text placement, or card/panel rescues.
 - Cover, hero, spread, and back-cover images were generated or extended for their target ratios, not destructively cropped into shape.
 - All spreads are in order.
 - Chapter titles appear only where intended.

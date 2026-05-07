@@ -755,6 +755,116 @@ def is_starter_scene_heading(value: str) -> bool:
     return stripped.removeprefix("Scene ").isdigit()
 
 
+def contract_box(value: object) -> tuple[float, float, float, float] | None:
+    if not isinstance(value, (list, tuple)) or len(value) < 4:
+        return None
+    try:
+        x, y, w, h = (float(value[index]) for index in range(4))
+    except (TypeError, ValueError):
+        return None
+    if w <= 0 or h <= 0:
+        return None
+    return x, y, w, h
+
+
+def box_inside(
+    outer: tuple[float, float, float, float],
+    inner: tuple[float, float, float, float],
+    padding: float,
+) -> bool:
+    ox, oy, ow, oh = outer
+    ix, iy, iw, ih = inner
+    return (
+        ix >= ox + padding
+        and iy >= oy + padding
+        and ix + iw <= ox + ow - padding
+        and iy + ih <= oy + oh - padding
+    )
+
+
+def validate_text_surface_contract(page: dict, block: dict, label: str) -> list[str]:
+    warnings: list[str] = []
+    role = str(block.get("role", "body"))
+    contract = (
+        block.get("text_surface")
+        or block.get("text_surface_contract")
+        or page.get("text_surface")
+        or page.get("text_surface_contract")
+    )
+
+    if not isinstance(contract, dict):
+        warnings.append(
+            f"{label} block '{role}' has no text_surface contract. "
+            "Final body text needs a verified native quiet area, not only a box."
+        )
+        return warnings
+
+    description = str(contract.get("description") or contract.get("surface") or "").strip()
+    edge_behavior = str(contract.get("edge_behavior") or "").strip()
+    art_exclusion = str(contract.get("art_exclusion") or "").strip()
+    if not description or any(marker in description for marker in PLACEHOLDER_MARKERS):
+        warnings.append(f"{label} block '{role}' text_surface needs a real description.")
+    if not edge_behavior or any(marker in edge_behavior for marker in PLACEHOLDER_MARKERS):
+        warnings.append(
+            f"{label} block '{role}' text_surface needs edge_behavior describing "
+            "how the illustration naturally ends or opens around the text."
+        )
+    if not art_exclusion or any(marker in art_exclusion for marker in PLACEHOLDER_MARKERS):
+        warnings.append(
+            f"{label} block '{role}' text_surface needs art_exclusion rules for "
+            "faces, objects, saturated color, and high-detail marks."
+        )
+
+    surface_bounds = contract_box(
+        contract.get("surface_bounds")
+        or contract.get("native_surface_bounds")
+        or contract.get("surface_box")
+    )
+    text_box = contract_box(block.get("box"))
+    if not surface_bounds:
+        warnings.append(
+            f"{label} block '{role}' text_surface needs surface_bounds [x, y, w, h] "
+            "for the native quiet area."
+        )
+    elif text_box:
+        padding = float(contract.get("padding_in", contract.get("inner_padding_in", 0.12)))
+        if not box_inside(surface_bounds, text_box, padding):
+            warnings.append(
+                f"{label} block '{role}' text box is not inside text_surface bounds "
+                f"with {padding:.2f} in padding."
+            )
+
+    verified = bool(contract.get("verified") or contract.get("surface_verified"))
+    if not verified:
+        warnings.append(
+            f"{label} block '{role}' text_surface is not verified. Inspect the image "
+            "without text, then the preview with text, before final assembly."
+        )
+
+    has_shape = bool(
+        block.get("line_shape") or block.get("negative_space_fit") or block.get("shape_verified")
+    )
+    if not has_shape:
+        warnings.append(
+            f"{label} block '{role}' has no final line_shape, negative_space_fit, "
+            "or shape_verified marker."
+        )
+
+    fit = block.get("negative_space_fit")
+    if isinstance(fit, dict):
+        try:
+            fallback_rows = int(fit.get("fallback_rows", 0))
+        except (TypeError, ValueError):
+            fallback_rows = 0
+        if fallback_rows > 0 and not block.get("shape_verified"):
+            warnings.append(
+                f"{label} block '{role}' negative-space fitter used {fallback_rows} "
+                "fallback rows. Inspect and set shape_verified only if the preview is correct."
+            )
+
+    return warnings
+
+
 def preflight_manifest(
     manifest: dict,
     manifest_path: Path,
@@ -804,16 +914,8 @@ def preflight_manifest(
                 if (
                     role == "body"
                     and block.get("text")
-                    and not (
-                        block.get("fit_to_negative_space")
-                        or block.get("line_shape")
-                        or block.get("shape_verified")
-                    )
                 ):
-                    warnings.append(
-                        f"{label} body text has no fit_to_negative_space, line_shape, "
-                        "or shape_verified marker."
-                    )
+                    warnings.extend(validate_text_surface_contract(page, block, label))
 
         if page.get("type") == "front_matter" and page.get("text_rendering_mode") != "native":
             for block in blocks:
